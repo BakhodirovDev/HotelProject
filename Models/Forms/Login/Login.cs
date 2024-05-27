@@ -35,13 +35,20 @@ namespace SysHotel.Models.Forms.Login
 
         private void LoginBTN_Click(object sender, EventArgs e)
         {
-            if (auth.VerifyUser(Username.Text, Password.Text))
+            var (id, role) = auth.VerifyUser(Username.Text, Password.Text);
+
+            if (id.HasValue && role == "Manager")
             {
-                MessageBox.Show("True");
+                MessageBox.Show("Behruz");
+                
+            }
+            else if (id.HasValue && role == "Admin")
+            {
+                MessageBox.Show("Diyorbek");
             }
             else
             {
-                MessageBox.Show("False");
+                MessageBox.Show("Invalid username or password.");
             }
         }
     }
