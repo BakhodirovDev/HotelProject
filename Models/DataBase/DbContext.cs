@@ -20,6 +20,8 @@ namespace SysHotel.Models.DataBase
         static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
         //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
 
+        public static string GetConnectionString() { return connectionString; }
+
         public static bool ChangeQuery<T>(T model) where T : new()
         {
             using NpgsqlConnection connection = new NpgsqlConnection(connectionString);

@@ -126,6 +126,7 @@
             LoginBTN.Size = new Size(270, 68);
             LoginBTN.TabIndex = 5;
             LoginBTN.Text = "Login";
+            LoginBTN.Click += LoginBTN_Click;
             // 
             // Password
             // 
@@ -141,7 +142,7 @@
             Password.Location = new Point(15, 346);
             Password.Margin = new Padding(6);
             Password.Name = "Password";
-            Password.PasswordChar = '\0';
+            Password.PasswordChar = '*';
             Password.PlaceholderText = "Enter Password";
             Password.SelectedText = "";
             Password.ShadowDecoration.CustomizableEdges = customizableEdges7;
