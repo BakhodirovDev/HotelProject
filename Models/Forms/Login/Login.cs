@@ -18,13 +18,18 @@ namespace SysHotel.Models.Forms.Login
         public Login()
         {
             InitializeComponent();
-            
-            DbContext.Query<Test2>("SELECT * FROM public.test2");
+
+            //DbContext.Query<Test2>("SELECT * FROM public.test2");
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void CloseBTN_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
