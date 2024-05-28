@@ -70,6 +70,7 @@ namespace SysHotel.Models.DataBase
         static string NamaChange<T>(string Name) where T : new()
         {
             T obj = new T();
+            
             Type type = obj.GetType();
 
             PropertyInfo[] prop = type.GetProperties();
