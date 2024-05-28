@@ -40,7 +40,7 @@ namespace SysHotel.Models.Forms.Login
         private void LoginBTN_Click(object sender, EventArgs e)
         {
 
-            
+
         }
         private void Username_TextChanged(object sender, EventArgs e)
         {
@@ -67,7 +67,7 @@ namespace SysHotel.Models.Forms.Login
             }
         }
 
-        
+
 
         private void LoginBTN_CheckedChanged(object sender, EventArgs e)
         {
@@ -81,7 +81,12 @@ namespace SysHotel.Models.Forms.Login
 
         private void LoginBTN_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
