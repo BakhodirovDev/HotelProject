@@ -40,30 +40,7 @@ namespace SysHotel.Models.Forms.Login
         private void LoginBTN_Click(object sender, EventArgs e)
         {
 
-            var (id, role) = auth.VerifyUser(Username.Text, Password.Text);
-
-            if (id.HasValue && role == "Manager")
-            {
-                ManagerForm managerForm = new ManagerForm((int)id);
-                managerForm.WindowState = FormWindowState.Maximized;
-                managerForm.Show();
-                this.Hide();
-
-
-            }
-            else if (id.HasValue && role == "Admin")
-            {
-                AdminForm adminForm = new AdminForm((int)id);
-                adminForm.WindowState = FormWindowState.Maximized;
-                adminForm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.");
-                Username.Text = "";
-                Password.Text = "";
-            }
+            
         }
         private void Username_TextChanged(object sender, EventArgs e)
         {
