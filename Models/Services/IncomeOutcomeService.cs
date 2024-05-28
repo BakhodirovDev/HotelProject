@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.Models.Interfaces
+namespace HotelProject.Models.Services
 {
-    public interface IOrder
+    public class IncomeOutcomeService
     {
 
     }

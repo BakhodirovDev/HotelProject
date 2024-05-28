@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.Models.Interfaces
 {
-    public interface IOrder
+    public interface IClient
     {
 
     }

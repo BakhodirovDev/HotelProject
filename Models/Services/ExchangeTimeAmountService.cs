@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.Models.Interfaces
+namespace HotelProject.Models.Services
 {
-    internal interface ICleint
+    public class ExchangeTimeAmountService
     {
+
     }
 }
