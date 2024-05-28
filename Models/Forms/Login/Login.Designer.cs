@@ -112,6 +112,7 @@
             // 
             // LoginBTN
             // 
+            LoginBTN.Animated = true;
             LoginBTN.CustomizableEdges = customizableEdges4;
             LoginBTN.DisabledState.BorderColor = Color.DarkGray;
             LoginBTN.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -133,6 +134,7 @@
             // 
             // Password
             // 
+            Password.Animated = true;
             Password.CustomizableEdges = customizableEdges6;
             Password.DefaultText = "";
             Password.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -166,6 +168,7 @@
             // 
             // Username
             // 
+            Username.Animated = true;
             Username.CustomizableEdges = customizableEdges8;
             Username.DefaultText = "";
             Username.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);

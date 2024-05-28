@@ -30,6 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,9 +49,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -60,11 +61,10 @@
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2CustomGradientPanel1.SuspendLayout();
             guna2CustomGradientPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel2
@@ -83,6 +83,22 @@
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2CustomGradientPanel2.Size = new Size(1516, 78);
             guna2CustomGradientPanel2.TabIndex = 1;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.ErrorImage = null;
+            guna2PictureBox1.Image = Properties.Resources.logo;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.InitialImage = Properties.Resources.logo;
+            guna2PictureBox1.Location = new Point(4, 4);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.Size = new Size(72, 68);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2PictureBox1.TabIndex = 2;
+            guna2PictureBox1.TabStop = false;
+            guna2PictureBox1.Click += guna2PictureBox1_Click;
             // 
             // guna2HtmlLabel1
             // 
@@ -146,6 +162,7 @@
             // guna2Button6
             // 
             guna2Button6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Button6.Animated = true;
             guna2Button6.BackColor = Color.FromArgb(255, 192, 128);
             guna2Button6.CustomizableEdges = customizableEdges6;
             guna2Button6.DisabledState.BorderColor = Color.DarkGray;
@@ -164,6 +181,7 @@
             // 
             // guna2Button5
             // 
+            guna2Button5.Animated = true;
             guna2Button5.BackColor = Color.FromArgb(255, 192, 128);
             guna2Button5.CustomizableEdges = customizableEdges8;
             guna2Button5.DisabledState.BorderColor = Color.DarkGray;
@@ -182,6 +200,7 @@
             // 
             // guna2Button4
             // 
+            guna2Button4.Animated = true;
             guna2Button4.BackColor = Color.FromArgb(255, 192, 128);
             guna2Button4.CustomizableEdges = customizableEdges10;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
@@ -200,6 +219,7 @@
             // 
             // guna2Button3
             // 
+            guna2Button3.Animated = true;
             guna2Button3.BackColor = Color.FromArgb(255, 192, 128);
             guna2Button3.CustomizableEdges = customizableEdges12;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
@@ -218,6 +238,7 @@
             // 
             // guna2Button2
             // 
+            guna2Button2.Animated = true;
             guna2Button2.BackColor = Color.FromArgb(255, 192, 128);
             guna2Button2.CustomizableEdges = customizableEdges14;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
@@ -233,9 +254,11 @@
             guna2Button2.Size = new Size(300, 68);
             guna2Button2.TabIndex = 2;
             guna2Button2.Text = "guna2Button2";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button1
             // 
+            guna2Button1.Animated = true;
             guna2Button1.BackColor = Color.FromArgb(255, 192, 128);
             guna2Button1.CustomizableEdges = customizableEdges16;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -252,22 +275,6 @@
             guna2Button1.TabIndex = 1;
             guna2Button1.Text = "Dashboard";
             // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
-            guna2PictureBox1.ErrorImage = null;
-            guna2PictureBox1.Image = Properties.Resources.logo;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.InitialImage = Properties.Resources.logo;
-            guna2PictureBox1.Location = new Point(4, 4);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(72, 68);
-            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2PictureBox1.TabIndex = 2;
-            guna2PictureBox1.TabStop = false;
-            guna2PictureBox1.Click += guna2PictureBox1_Click;
-            // 
             // ManagerForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -280,9 +287,9 @@
             Text = "ManagerForm";
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
 

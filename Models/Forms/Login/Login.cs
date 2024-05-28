@@ -1,4 +1,5 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.Forms.Admin;
 using HotelProject.Models.Forms.Manager;
 using Microsoft.VisualBasic.ApplicationServices;
 using SysHotel.Models.DataBase;
@@ -52,7 +53,10 @@ namespace SysHotel.Models.Forms.Login
             }
             else if (id.HasValue && role == "Admin")
             {
-                MessageBox.Show("Diyorbek");
+                AdminForm adminForm = new AdminForm((int)id);
+                adminForm.WindowState = FormWindowState.Maximized;
+                adminForm.Show();
+                this.Hide();
             }
             else
             {

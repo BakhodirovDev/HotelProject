@@ -35,5 +35,10 @@ namespace HotelProject.Models.Forms.Manager
         {
 
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
