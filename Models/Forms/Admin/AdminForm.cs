@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysHotel.Models.Forms.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace HotelProject.Models.Forms.Admin
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        public AdminForm(int id)
         {
             InitializeComponent();
             this.Load += new EventHandler(this.AdminForm_Load);
@@ -41,6 +42,24 @@ namespace HotelProject.Models.Forms.Admin
         private void guna2Button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AFLoginOutGradientPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.StartPosition = FormStartPosition.CenterScreen;
+            login.Show();
+            this.Hide();
         }
     }
 }

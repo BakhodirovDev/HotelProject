@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -49,12 +50,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             AFLoginOutGradientPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
-            AFpictureHotelInbilemaCirclePictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            AFNameHotelHtmlLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -69,7 +70,7 @@
             guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2NotificationPaint2 = new Guna.UI2.WinForms.Guna2NotificationPaint(components);
             AFLoginOutGradientPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)AFpictureHotelInbilemaCirclePictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2CustomGradientPanel2.SuspendLayout();
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
@@ -80,40 +81,47 @@
             // 
             // AFLoginOutGradientPanel
             // 
-            AFLoginOutGradientPanel.Controls.Add(AFpictureHotelInbilemaCirclePictureBox);
-            AFLoginOutGradientPanel.Controls.Add(AFNameHotelHtmlLabel);
+            AFLoginOutGradientPanel.Controls.Add(guna2PictureBox1);
+            AFLoginOutGradientPanel.Controls.Add(guna2HtmlLabel2);
             AFLoginOutGradientPanel.Controls.Add(guna2HtmlLabel1);
-            AFLoginOutGradientPanel.CustomizableEdges = customizableEdges18;
+            AFLoginOutGradientPanel.CustomizableEdges = customizableEdges19;
             AFLoginOutGradientPanel.Dock = DockStyle.Top;
             AFLoginOutGradientPanel.FillColor = Color.DarkOrange;
             AFLoginOutGradientPanel.FillColor2 = Color.Olive;
             AFLoginOutGradientPanel.Location = new Point(8, 8);
             AFLoginOutGradientPanel.Name = "AFLoginOutGradientPanel";
-            AFLoginOutGradientPanel.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            AFLoginOutGradientPanel.Size = new Size(1208, 35);
+            AFLoginOutGradientPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            AFLoginOutGradientPanel.Size = new Size(1208, 49);
             AFLoginOutGradientPanel.TabIndex = 0;
+            AFLoginOutGradientPanel.Paint += AFLoginOutGradientPanel_Paint;
             // 
-            // AFpictureHotelInbilemaCirclePictureBox
+            // guna2PictureBox1
             // 
-            AFpictureHotelInbilemaCirclePictureBox.ImageRotate = 0F;
-            AFpictureHotelInbilemaCirclePictureBox.Location = new Point(838, -2);
-            AFpictureHotelInbilemaCirclePictureBox.Name = "AFpictureHotelInbilemaCirclePictureBox";
-            AFpictureHotelInbilemaCirclePictureBox.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            AFpictureHotelInbilemaCirclePictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            AFpictureHotelInbilemaCirclePictureBox.Size = new Size(34, 31);
-            AFpictureHotelInbilemaCirclePictureBox.TabIndex = 2;
-            AFpictureHotelInbilemaCirclePictureBox.TabStop = false;
+            guna2PictureBox1.CustomizableEdges = customizableEdges17;
+            guna2PictureBox1.ErrorImage = null;
+            guna2PictureBox1.Image = Properties.Resources.logo;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.InitialImage = Properties.Resources.logo;
+            guna2PictureBox1.Location = new Point(802, -6);
+            guna2PictureBox1.Margin = new Padding(2);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2PictureBox1.Size = new Size(58, 54);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            guna2PictureBox1.TabIndex = 4;
+            guna2PictureBox1.TabStop = false;
             // 
-            // AFNameHotelHtmlLabel
+            // guna2HtmlLabel2
             // 
-            AFNameHotelHtmlLabel.BackColor = Color.Transparent;
-            AFNameHotelHtmlLabel.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            AFNameHotelHtmlLabel.ForeColor = SystemColors.ActiveCaptionText;
-            AFNameHotelHtmlLabel.Location = new Point(888, -1);
-            AFNameHotelHtmlLabel.Name = "AFNameHotelHtmlLabel";
-            AFNameHotelHtmlLabel.Size = new Size(152, 30);
-            AFNameHotelHtmlLabel.TabIndex = 1;
-            AFNameHotelHtmlLabel.Text = "FullNameHotel";
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Palatino Linotype", 16F, FontStyle.Bold);
+            guna2HtmlLabel2.ForeColor = Color.White;
+            guna2HtmlLabel2.Location = new Point(875, 5);
+            guna2HtmlLabel2.Margin = new Padding(2);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(368, 39);
+            guna2HtmlLabel2.TabIndex = 3;
+            guna2HtmlLabel2.Text = "The Heritage Tashkent Hotel";
             // 
             // guna2HtmlLabel1
             // 
@@ -140,12 +148,13 @@
             guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageAlign = HorizontalAlignment.Right;
             guna2Button2.ImageSize = new Size(35, 35);
-            guna2Button2.Location = new Point(0, 584);
+            guna2Button2.Location = new Point(0, 570);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button2.Size = new Size(226, 68);
             guna2Button2.TabIndex = 3;
             guna2Button2.Text = "Log out";
+            guna2Button2.Click += guna2Button2_Click_1;
             // 
             // guna2CustomGradientPanel2
             // 
@@ -160,7 +169,7 @@
             guna2CustomGradientPanel2.FillColor2 = Color.DarkBlue;
             guna2CustomGradientPanel2.FillColor3 = Color.DarkBlue;
             guna2CustomGradientPanel2.FillColor4 = Color.DarkBlue;
-            guna2CustomGradientPanel2.Location = new Point(8, 43);
+            guna2CustomGradientPanel2.Location = new Point(8, 57);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2CustomGradientPanel2.Size = new Size(1208, 51);
@@ -275,10 +284,10 @@
             guna2CustomGradientPanel1.FillColor2 = Color.DarkGray;
             guna2CustomGradientPanel1.FillColor3 = Color.Silver;
             guna2CustomGradientPanel1.FillColor4 = Color.Black;
-            guna2CustomGradientPanel1.Location = new Point(8, 94);
+            guna2CustomGradientPanel1.Location = new Point(8, 108);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2CustomGradientPanel1.Size = new Size(226, 652);
+            guna2CustomGradientPanel1.Size = new Size(226, 638);
             guna2CustomGradientPanel1.TabIndex = 3;
             // 
             // guna2Button1
@@ -320,20 +329,20 @@
             // 
             guna2CustomGradientPanel3.CustomizableEdges = customizableEdges1;
             guna2CustomGradientPanel3.Dock = DockStyle.Left;
-            guna2CustomGradientPanel3.Location = new Point(234, 94);
+            guna2CustomGradientPanel3.Location = new Point(234, 108);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2CustomGradientPanel3.Size = new Size(453, 652);
+            guna2CustomGradientPanel3.Size = new Size(453, 638);
             guna2CustomGradientPanel3.TabIndex = 4;
             // 
             // guna2CustomGradientPanel4
             // 
-            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges20;
+            guna2CustomGradientPanel4.CustomizableEdges = customizableEdges21;
             guna2CustomGradientPanel4.Dock = DockStyle.Fill;
             guna2CustomGradientPanel4.Location = new Point(8, 8);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.BorderRadius = 26;
-            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2CustomGradientPanel4.ShadowDecoration.Depth = 10;
             guna2CustomGradientPanel4.Size = new Size(1208, 738);
             guna2CustomGradientPanel4.TabIndex = 5;
@@ -371,7 +380,7 @@
             Load += AdminForm_Load;
             AFLoginOutGradientPanel.ResumeLayout(false);
             AFLoginOutGradientPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)AFpictureHotelInbilemaCirclePictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
             guna2CustomGradientPanel1.ResumeLayout(false);
@@ -383,8 +392,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel AFLoginOutGradientPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         public Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel AFNameHotelHtmlLabel;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox AFpictureHotelInbilemaCirclePictureBox;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
@@ -397,5 +404,7 @@
         private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint2;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }
