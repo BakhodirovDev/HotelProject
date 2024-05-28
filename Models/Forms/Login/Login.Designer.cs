@@ -126,6 +126,9 @@
             LoginBTN.Size = new Size(270, 68);
             LoginBTN.TabIndex = 5;
             LoginBTN.Text = "Login";
+            LoginBTN.CheckedChanged += LoginBTN_CheckedChanged;
+            LoginBTN.EnabledChanged += LoginBTN_EnabledChanged;
+            LoginBTN.TextChanged += LoginBTN_TextChanged;
             LoginBTN.Click += LoginBTN_Click;
             // 
             // Password
@@ -148,6 +151,7 @@
             Password.ShadowDecoration.CustomizableEdges = customizableEdges7;
             Password.Size = new Size(430, 64);
             Password.TabIndex = 4;
+            Password.TextChanged += Password_TextChanged;
             // 
             // PasswordLB
             // 
@@ -180,6 +184,7 @@
             Username.ShadowDecoration.CustomizableEdges = customizableEdges9;
             Username.Size = new Size(430, 64);
             Username.TabIndex = 2;
+            Username.TextChanged += Username_TextChanged;
             // 
             // UsernameLB
             // 
@@ -206,9 +211,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = HotelProject.Properties.Resources.Login;
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(-47, -21);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(911, 696);
+            pictureBox1.Size = new Size(998, 717);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
