@@ -20,7 +20,6 @@ namespace HotelProject.Models.Services
             }
 			catch (Exception)
 			{
-
 				throw;
 			}
         }
