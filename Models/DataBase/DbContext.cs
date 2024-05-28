@@ -15,7 +15,7 @@ using System.Data;
 
 namespace SysHotel.Models.DataBase
 {
-    internal static class DbContext
+    internal class DbContext
     {
         static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
         //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
