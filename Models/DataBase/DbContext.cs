@@ -20,58 +20,75 @@ namespace SysHotel.Models.DataBase
         static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
         //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
 
-        public static string GetConnectionString() { return connectionString; }
-
-        public static bool ChangeQuery<T>(T model) where T : new()
+        public static bool InsertQuery<T>(T model, string schema) where T : new()
         {
             using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
             connection.Open();
+            string entresult = InsertString<T>(model);
+            using NpgsqlCommand cmd = new NpgsqlCommand(@$"INSERT INTO {schema}." + entresult, connection);
 
-            using NpgsqlCommand cmd = new NpgsqlCommand(@"SELECT * FROM public.test2", connection);
+            cmd.ExecuteNonQuery();
 
-            using NpgsqlDataReader reader = cmd.ExecuteReader();
+            connection.Close();
 
+            return true;
+        }
+        public static bool ChangeQueryById<T>(T model, string schema) where T : new()
+        {
+            using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+            connection.Open();
+            string entresult = UpdateString<T>(model);
+            using NpgsqlCommand cmd = new NpgsqlCommand(@$"update {schema}." + entresult, connection);
+
+            cmd.ExecuteNonQuery();
+
+            connection.Close();
             return true;
         }
 
         public static List<T> Query<T>(string query) where T : new()
         {
-
-            using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
-            connection.Open();
-
-            List<T> res = new List<T>();
-            NpgsqlCommand q = new NpgsqlCommand(query, connection);
-            using NpgsqlDataReader r = q.ExecuteReader();
-
-            while (r.Read())
+            try
             {
-                T t = new T();
+                using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+                connection.Open();
 
-                for (int inc = 0; inc < r.FieldCount; inc++)
+                List<T> res = new List<T>();
+                NpgsqlCommand q = new NpgsqlCommand(query, connection);
+                using NpgsqlDataReader r = q.ExecuteReader();
+
+                while (r.Read())
                 {
-                    Type type = t.GetType();
+                    T t = new T();
 
-                    string namechange= NamaChange<T>(r.GetName(inc));
+                    for (int inc = 0; inc < r.FieldCount; inc++)
+                    {
+                        Type type = t.GetType();
 
-                    PropertyInfo prop = type.GetProperty(namechange);
-                    
-                    prop.SetValue(t, Convert.ChangeType(r.GetValue(inc), r.GetFieldType(inc)), null);
-                    prop.SetValue(t, r.GetValue(inc), null);
+                        string namechange = NamaChange<T>(r.GetName(inc));
+
+                        PropertyInfo prop = type.GetProperty(namechange);
+
+                        prop.SetValue(t, Convert.ChangeType(r.GetValue(inc), r.GetFieldType(inc)), null);
+                        prop.SetValue(t, r.GetValue(inc), null);
+                    }
+
+                    res.Add(t);
                 }
+                r.Close();
 
-                res.Add(t);
+                return res;
             }
-            r.Close();
-
-            return res;
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         static string NamaChange<T>(string Name) where T : new()
         {
-            T obj = new T();
-            
-            Type type = obj.GetType();
+            T t = new T();
+            Type type = t.GetType();
 
             PropertyInfo[] prop = type.GetProperties();
 
@@ -79,6 +96,72 @@ namespace SysHotel.Models.DataBase
 
             return result.Name;
         }
-      
+        static string InsertString<T>(T model) where T : new()
+        {
+            string text = "", text1 = "", result;
+
+            T t = new T();
+            Type type = t.GetType();
+            Type modelName = typeof(T);
+
+            PropertyInfo[] prop = type.GetProperties();
+
+            for (int i = 1; i < prop.Length; i++)
+            {
+                text += prop[i].Name.ToLower() + ",";
+            }
+            text = modelName.Name + "(" + text.Substring(0, text.Length - 1) + ")";
+
+            for (int i = 1; i < prop.Length; i++)
+            {
+                object stringValue = GetPropertyValue<T>(model, prop[i].Name);
+                PropertyInfo propertyInfo = type.GetProperty(prop[i].Name);
+                string newresult = (propertyInfo.PropertyType.ToString() == "System.String") ? $"'{stringValue}'" : stringValue.ToString();
+                text1 = " values (" + newresult + ")";
+            }
+            result = text + text1;
+
+            return result;
+        }
+        static string UpdateString<T>(T model) where T : new()
+        {
+            string text = "", result;
+
+            T t = new T();
+            Type type = t.GetType();
+            Type modelName = typeof(T);
+
+            PropertyInfo[] prop = type.GetProperties();
+
+            for (int i = 1; i < prop.Length; i++)
+            {
+                object stringValue = GetPropertyValue<T>(model, prop[i].Name);
+                PropertyInfo propertyInfo = type.GetProperty(prop[i].Name);
+                string newresult = (propertyInfo.PropertyType.ToString() == "System.String") ? $"'{stringValue}'" : stringValue.ToString();
+
+                text += prop[i].Name.ToLower() + "=" + newresult.ToString() + ",";
+            }
+            result = modelName.Name + " set " + text.Substring(0, text.Length - 1) + " where id=" + GetPropertyValue<T>(model, prop[0].Name);
+
+            return result;
+        }
+        static object GetPropertyValue<T>(T obj, string propertyName)
+        {
+            // Get the type of the object
+            Type type = typeof(T);
+
+            // Get the PropertyInfo object representing the property
+            PropertyInfo propertyInfo = type.GetProperty(propertyName);
+
+            // Check if the property exists
+            if (propertyInfo == null)
+            {
+                throw new ArgumentException($"Property '{propertyName}' not found on type '{type.Name}'.");
+            }
+
+            // Get the value of the property
+            return propertyInfo.GetValue(obj);
+        }
+
     }
 }
