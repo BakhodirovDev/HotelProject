@@ -17,8 +17,8 @@ namespace SysHotel.Models.DataBase
 {
     internal class DbContext
     {
-        static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
-        //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
+        //static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
+        static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
 
         public static bool InsertQuery<T>(T model, string schema) where T : new()
         {
@@ -117,8 +117,9 @@ namespace SysHotel.Models.DataBase
                 object stringValue = GetPropertyValue<T>(model, prop[i].Name);
                 PropertyInfo propertyInfo = type.GetProperty(prop[i].Name);
                 string newresult = (propertyInfo.PropertyType.ToString() == "System.String") ? $"'{stringValue}'" : stringValue.ToString();
-                text1 = " values (" + newresult + ")";
+                text1 += newresult + ",";
             }
+            text1 = " values (" + text1.Substring(0,text1.Length-1) + ")";
             result = text + text1;
 
             return result;

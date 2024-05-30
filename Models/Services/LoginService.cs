@@ -15,8 +15,8 @@ namespace HotelProject.Models.Services
         {
 			try
 			{
-                DbContext.Query<Users>("");
-                return Task.FromResult(true);
+                bool result=DbContext.InsertQuery<Users>(model,"public");
+                return Task.FromResult(result);
             }
 			catch (Exception)
 			{
