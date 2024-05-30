@@ -91,7 +91,7 @@
             AFLoginOutGradientPanel.Location = new Point(8, 8);
             AFLoginOutGradientPanel.Name = "AFLoginOutGradientPanel";
             AFLoginOutGradientPanel.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            AFLoginOutGradientPanel.Size = new Size(1208, 49);
+            AFLoginOutGradientPanel.Size = new Size(1205, 49);
             AFLoginOutGradientPanel.TabIndex = 0;
             AFLoginOutGradientPanel.Paint += AFLoginOutGradientPanel_Paint;
             // 
@@ -172,7 +172,7 @@
             guna2CustomGradientPanel2.Location = new Point(8, 57);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel2.Size = new Size(1208, 51);
+            guna2CustomGradientPanel2.Size = new Size(1205, 51);
             guna2CustomGradientPanel2.TabIndex = 2;
             // 
             // guna2HtmlLabel3
@@ -232,7 +232,7 @@
             guna2Button4.ImageAlign = HorizontalAlignment.Left;
             guna2Button4.ImageOffset = new Point(1, 1);
             guna2Button4.ImageSize = new Size(25, 25);
-            guna2Button4.Location = new Point(1115, 0);
+            guna2Button4.Location = new Point(1112, 0);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.BorderRadius = 30;
             guna2Button4.ShadowDecoration.Color = Color.Transparent;
@@ -262,7 +262,7 @@
             guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
             guna2Button3.ImageOffset = new Point(1, 1);
             guna2Button3.ImageSize = new Size(35, 35);
-            guna2Button3.Location = new Point(1166, 0);
+            guna2Button3.Location = new Point(1163, 0);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.BorderRadius = 30;
             guna2Button3.ShadowDecoration.Color = Color.Transparent;
@@ -344,7 +344,7 @@
             guna2CustomGradientPanel4.ShadowDecoration.BorderRadius = 26;
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2CustomGradientPanel4.ShadowDecoration.Depth = 10;
-            guna2CustomGradientPanel4.Size = new Size(1208, 738);
+            guna2CustomGradientPanel4.Size = new Size(1205, 738);
             guna2CustomGradientPanel4.TabIndex = 5;
             // 
             // guna2NotificationPaint2
@@ -364,7 +364,7 @@
             AutoScrollMinSize = new Size(10, 10);
             AutoSize = true;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1224, 754);
+            ClientSize = new Size(1221, 754);
             Controls.Add(guna2CustomGradientPanel3);
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2CustomGradientPanel2);
