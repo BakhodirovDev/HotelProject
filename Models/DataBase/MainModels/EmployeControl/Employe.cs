@@ -14,10 +14,9 @@ namespace HotelProject.Models.DataBase.MainModels.EmployeControl
         public string LastName { get; set; }
         public string SureName { get; set; }
         public int Age { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
         public string EmpType { get; set; }
-        public int SalaryId { get; set; }
-
+        public int Salary { get; set; }
+        public string? Login { get; set; }
+        public string? Password { get; set; }
     }
 }
