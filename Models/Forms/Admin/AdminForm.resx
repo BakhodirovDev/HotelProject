@@ -117,11 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="guna2ResizeForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BorderAFResizeForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>49</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAASBJREFUSEvN
+        kg0NwlAMhCcBCUhAwhyABByAAyYBJ+AAHIADkIADuHtcx/ZKlv00hC+5bOmNe7Svxc95BqJIj/wQFOmR
+        H4IiPfJDUKRHvnGGqgHi9zWK9Mg3TtBugPh9jSI98kNQpEd+CIr0yA9BkR75ISjSIz8ERXrkG7bCtpr5
+        yuaatMK2mvnK5vrfFR4yriuUUyq2jUyj77gO0B1aQXOJ76xtFf0BxTEwbKaIGtR4GL12Ryg06TOu1IF+
+        XoPaHjrS41PlNyg06TMuMoP4r1M3eK4h3pHVHyncQGEMDGNXF2gDPaC58nhIe9NYGEEaF57sgAcsUhig
+        B3WOqy836NvFs0N6nRc/BIYtIY6H4jtrlaKng7AS4jZxXIQbqQ6K4gVS5bekEDoeVwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="LogOutButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAARdJREFUSEvl
         lesRgjAQhCmBUiyBEiiBTrQD7UA70A6kA+1AO9AO4i5ZFLmAEvCH+s3sjJd7LI8EkybOuRRaQxcoBvax
@@ -131,25 +145,25 @@
         OUFj/uPZ32vS3vex7DTSgiSvZAPxUMXAPvY3nkSS3ABR5fAf+OQwMQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ActiveRoomsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAVBJREFUSEvt
-        lGFRAzEUhE9CJVRCJVRCJdQBdQAScEAl4AAcgAOQgIPj27Avk9yF9GjhBwM7s5Nk30s2L8nd8DcxjuMO
-        Xnl4PlhkA/ceZqAd4CO8hUfL54EFtvAGbixJO5YL09/DZ7iy9DUwMUy06xV8gq3KVLGM8mYWg0mlSXcR
-        Ymvn7SwtAxNk8uDJa8ux83szV0Zf1Uq7tnQaJOtiNak6b8bp+KKfxAJo6UFEThMKwjslW6qAno1pZyYC
-        uh5E3kwFiVAXfLA0A7E4ru4dOO9NraUsvppbyxeBdQRt5uPu6OiiVYnE7zTRmnXFCJ+aSId6cSV7Rzu6
-        WwO9Z6Lvpoop390ZiP0CE9ruMxaIdU30jKdnL77AMEmGUM+0lSv2K4HpV1K2sKxE43iNals8aTJtZdC8
-        k2m8aC+rJMBY+dMKosraxAGd70+g2tg/FmAY3gFvh9QfuMVbUAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAUxJREFUSEu9
+        lYtxwjAQRF0CJVCCS6AEOggdQAfQSdJJSggdQAekA7MrrXyWcviDNXkzN8Z7q41zSKZZQtd1G9QHr5Lq
+        guAt6gdFeN2qVQcE7lEPpg/g/V6WdSDoEiJfc5Z1OVjM+X+HmGnoW/Y9YUGLunH1AuhvFTEOjAdUOf+5
+        cN1BUT4wfAXrej4VaUAcbs9a2DbHB87/3fFM8Ytq0x/ZUXG4okbPAvvyeTDXNkPU/jDrVNMX7TlqG9JL
+        OMajLC7o87C645bFkJ64o/h0LH529z90jqP09shmSE9cJKcn7e+HlD3d90g2pCd4esP3gSuflrvEI+6e
+        6ON/kr0lqGdIz1BrFlqSoZYhvWTWu4i+aM9R25BeEuaNK0d2dmqnvvtzwF6G9BK+Ghj26pUz2le0Ib0q
+        ijakV0XRhvSqKNqAdkKFw1WpTor+D5rmCU4RllehTfc3AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2Button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MenuButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAFVJREFUSEvt
         lEEKACAIBP1Z/bx+ZivYrUNBKx4cmLO4K0rxhKp22JjaEDphQywuqt5MkQkUM+FgGnbCtglVD63IBIqx
         /3J80b8MO2E6Oy6q3kxxg8gCI/bwsJrl1PUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BellButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAZJJREFUSEvt
         lEFKw0AUht8RPEJOkM4FEuYI3bn1KF260xvUO7gTbEQR3CULKZQu7MJNo9AsmoqKGd8/eUPSNqVRsijo
@@ -161,7 +175,7 @@
         zqib1tVc/ebb6uOe1OcdZWyDEbU86lZ8czwO0Bhl6k+J6BvnIIrM/35AQwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SettingsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAadJREFUSEvN
         lYFxwjAMRRmBURiBDdoNygYwQjeAEdgANigbwAZlg7IBfS8oBMeOgfau13enI/qSnChyzOhfcD6fp9gS
@@ -174,10 +188,66 @@
         XiunJQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="guna2NotificationPaint1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RoomType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SearchARoomsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvt
+        lVERgzAQRJGAFCQgCQk4aCXUQSsBByChDooDuks2nZQBjgT4at/MDiSzd5dMuJD9BsMwlNAFaiEP3zlX
+        ypYGEuTQHbKgJ1fYdhgEhSu3oDeuEAK6MTSOVuE2MNcuJolaadaBsXf+JF5KswxMhfPuolC6eWConO/D
+        Q/JYY1Ip3TwwfJ2Hpjk/ouHiWKyfCwzTnbAHwl6xxsTcyflnQmDa83X1SrMOjOf3CYE5peM7hW8DAby7
+        Ygsl3V8sNO2BOejxC4ovRBDE/8kVCnf2hG7Q+CXhGe48rdAWmBj6F4qHiSFfqNH08SA5CzWQfc0cQ5a9
+        AcSvH0EX46DsAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ChangeRoomARoomsButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAARJJREFUSEvt
+        lUEOwUAUhnsER3AEN+AADuEGtqxY2NvbsLLunoQbSJzCjhvU90/fxEjVdAQL8SVf2r7Oe3/FqOzPWyiK
+        ooVL3EXUmpa1pUHjCpsytbY0aNyX/Y3YW1saaiz7G/E7IWcMN8MQ45uBRSkhj1jZqHpYlBJywrW5VQHO
+        NqoeFqWEHLFvjlUQNqoe1nwlZFAubcQc4yHUpjjBtpV8kOpe7RyhJ/ffwQx9QDTE07NSBe4pSGh4ODg0
+        LYTzu73O9UdCcuzYZRiywVGNC3RY2w2rC/1au+YBL+iCOKZshtwNDlGxvPcQvTbchuCoT6Pt/Uz9TVRf
+        KyqigsLFGi7ir4hXYbh7Krv8DAQM7PQPZNkVekcgEBBwDwkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ChangeTimeARoomsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAXpJREFUSEvN
+        ldFVwzAMRTNCR2AENqAb0BHYgG5AN2hH6AZ0g3YD2AA2KBuEd+1nkpRgq/DDPeed2rIsRbHcdP+Cvu+X
+        0lY6SmcJ+GWO/c6u16PNBH+RIuC39NYY2rBLW+fZ+3eOrUPUkeMh+89jnxrPKdBPyKFWQcJ+LXYp4CVa
+        4Aya2DfC9zOS8TWv1bFvhGMKXJAhVAXYP8pQjSbNsyjYP8pwNpqcsq2N/aOcUgLQ5CPbmmzsv8nTJueU
+        AGxoYnf8F9nSxlvCldB9N/aPVjJJ0jqTlECK/pcVJmdS667fJoBJd9Xuya3USvAurSQeBjHGtneKjAyh
+        Gz8DwRaO8YA8pjlYm1zI8K2/YOUQxKAhUpsDa9LB04wM4Zs/gideS08SX0vE+FHi1Q0dVpCt+j2ZoSSh
+        CroUMcY2nwRkv6ai617XGC1yRpFmeJPKwfP0a4+pkLX2tx8nicp4DeN/BubY+ebTRfdSaWHGJPiq6s8o
+        GA8yPksewBV03SdC7cJIMtqGRwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="DeleteARoomsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAANVJREFUSEvt
+        ktENgzAQQzMKIzACozBKR2CEbgIbdIVu0G6Q2sg50tIDkaJ+5UmWwp3jI4SwR4yxhUboGzeolbUMBDTQ
+        g2kbsN9oy3GweZhjYrxDb2+MZ74A62RQeRsYJ4ifJdfeKRL0fe4dFb2A4ukoegG17mwpeg2avIfV0Y9I
+        UT4w8W5+QlE+8Px9yBVKvynrqZev2afPUJQPPPkQXmB6vkgkX7NPn6EoH3jqEENRPvDUIYaifOCpQwxF
+        +cBThxiK8oEnH1LCU1E+MPU0zvYyekWJEF5K8BlZ6a0FtAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="BorderAFNotificationPaint1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>198, 17</value>
   </metadata>
-  <metadata name="guna2NotificationPaint2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BellNotificationPaint.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>414, 17</value>
+  </metadata>
+  <metadata name="activeOrderBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <metadata name="activeOrderBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>258, 58</value>
+  </metadata>
+  <metadata name="orderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>499, 58</value>
   </metadata>
 </root>
