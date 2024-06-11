@@ -112,13 +112,13 @@ namespace HotelProject.Models.Forms.Admin
 
         private void guna2DataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            ButtonCellPaintingDGV("Plus", "C:\\Users\\Hp\\Pictures\\Saved Pictures\\Plus.png", OrderDVG, e);
+            ButtonCellPaintingDGV("Plus", @"../../../Pictures/Plus.png", OrderDVG, e);
         }
 
         private void guna2DataGridView2_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            ButtonCellPaintingDGV("Delete", "C:\\Users\\Hp\\Pictures\\Saved Pictures\\DeleteDGV.png", guna2DataGridView2, e);
-            ButtonCellPaintingDGV("Update", "C:\\Users\\Hp\\Pictures\\Saved Pictures\\Available Updates.png", guna2DataGridView2, e);
+            ButtonCellPaintingDGV("Delete", @"../../../Pictures/DeleteDGV.png", guna2DataGridView2, e);
+            ButtonCellPaintingDGV("Update", @"../../../Pictures/Available Updates.png", guna2DataGridView2, e);
         }
         private void ButtonCellPaintingDGV(string ColumnName, string PicturePath, DataGridView dataGridViewName, DataGridViewCellPaintingEventArgs e)
         {
