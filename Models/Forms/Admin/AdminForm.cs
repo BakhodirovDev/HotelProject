@@ -1,4 +1,5 @@
-﻿using HotelProject.Models.Services;
+﻿using HotelProject.Models.DataBase.MainModels.EmployeControl;
+using HotelProject.Models.Services;
 using SysHotel.Models.Forms.Login;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,8 @@ namespace HotelProject.Models.Forms.Admin
         {
             InitializeComponent();
             this.Load += new EventHandler(this.AdminForm_Load);
+            OrderService orderService = new OrderService();
+            OrderDVG.DataSource =orderService.ActiveOrderList() ;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
@@ -42,7 +45,7 @@ namespace HotelProject.Models.Forms.Admin
 
         private void ActiveRoomsPanel_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void ActiveRoomsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -104,7 +107,38 @@ namespace HotelProject.Models.Forms.Admin
 
         private void ActiveRoomsPanel_FontChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void guna2DataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            ButtonCellPaintingDGV("Plus", "C:\\Users\\Hp\\Pictures\\Saved Pictures\\Plus.png", OrderDVG, e);
+        }
+
+        private void guna2DataGridView2_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            ButtonCellPaintingDGV("Delete", "C:\\Users\\Hp\\Pictures\\Saved Pictures\\DeleteDGV.png", guna2DataGridView2, e);
+            ButtonCellPaintingDGV("Update", "C:\\Users\\Hp\\Pictures\\Saved Pictures\\Available Updates.png", guna2DataGridView2, e);
+        }
+        private void ButtonCellPaintingDGV(string ColumnName, string PicturePath, DataGridView dataGridViewName, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridViewName.Columns[ColumnName].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                // Rasmni yuklash
+                Image img = Image.FromFile(PicturePath);
+                int imgX = e.CellBounds.Left + (e.CellBounds.Width - img.Width) / 2;
+                int imgY = e.CellBounds.Top + (e.CellBounds.Height - img.Height) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(imgX, imgY, img.Width, img.Height));
+                e.Handled = true;
+            }
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

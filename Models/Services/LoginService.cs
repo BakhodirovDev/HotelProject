@@ -1,4 +1,5 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Interfaces;
 using SysHotel.Models.DataBase;
 using System;
@@ -11,11 +12,13 @@ namespace HotelProject.Models.Services
 {
     public class LoginService : ILogin
     {
-        public Task<bool> AddUser(Users model)
+        public Task<bool> AddUser(Users model,Client client)
         {
 			try
 			{
-                bool result=DbContext.InsertQuery<Users>(model,"public");
+                
+
+                bool result = DbContext.InsertQuery<Users>(model, "public");
                 return Task.FromResult(result);
             }
 			catch (Exception)

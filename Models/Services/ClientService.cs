@@ -1,7 +1,7 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Interfaces;
 using SysHotel.Models.DataBase;
-using SysHotel.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +13,12 @@ namespace HotelProject.Models.Services
 {
     public class ClientService : IClient
     {
-        public List<Order> ActiveRoomsList()
+        public  List<Client> ActiveRoomsList()
         {
             try
             {
-                return DbContext.Query<Order>("select * from \"OrderAction\".\"order\"");
+                List<Client> Test = DbContext.Query<Client>("select * from \"public\".\"Client\"");
+                return Test.ToList();
             }
             catch (Exception ex) 
             {

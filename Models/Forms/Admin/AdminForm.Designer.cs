@@ -39,9 +39,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -62,6 +62,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -109,6 +116,13 @@
             BorderAFNotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(components);
             BellNotificationPaint = new Guna.UI2.WinForms.Guna2NotificationPaint(components);
             OrderPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            Update = new DataGridViewButtonColumn();
+            Delete = new DataGridViewButtonColumn();
+            orderBindingSource = new BindingSource(components);
+            OrderDVG = new Guna.UI2.WinForms.Guna2DataGridView();
+            Plus = new DataGridViewButtonColumn();
+            orderBindingSource2 = new BindingSource(components);
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -116,13 +130,22 @@
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            activeRoomsModelDGVBindingSource = new BindingSource(components);
             ActiveRoomsButton = new Guna.UI2.WinForms.Guna2Button();
             LogOutButton = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             MenuButtonsPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             activeOrderBindingSource1 = new BindingSource(components);
             activeOrderBindingSource2 = new BindingSource(components);
-            orderBindingSource = new BindingSource(components);
+            orderBindingSource1 = new BindingSource(components);
+            ordersBindingSource = new BindingSource(components);
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            checkoutTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            priceIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             AFLoginOutGradientPanel.SuspendLayout();
             gHotelNamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HotelPictureBox).BeginInit();
@@ -132,11 +155,17 @@
             SearchAndChangeARoomsPanel.SuspendLayout();
             guna2CustomGradientPanel2.SuspendLayout();
             OrderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)orderBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)OrderDVG).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)orderBindingSource2).BeginInit();
             guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)activeRoomsModelDGVBindingSource).BeginInit();
             MenuButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)activeOrderBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)activeOrderBindingSource2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)orderBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)orderBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ordersBindingSource).BeginInit();
             SuspendLayout();
             // 
             // BorderAFResizeForm1
@@ -292,27 +321,27 @@
             // 
             // ActiveRoomsDGV
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            ActiveRoomsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            ActiveRoomsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            ActiveRoomsDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle9.ForeColor = Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            ActiveRoomsDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             ActiveRoomsDGV.ColumnHeadersHeight = 22;
             ActiveRoomsDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             ActiveRoomsDGV.Columns.AddRange(new DataGridViewColumn[] { Number, RoomType });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            ActiveRoomsDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
+            ActiveRoomsDGV.DefaultCellStyle = dataGridViewCellStyle10;
             ActiveRoomsDGV.Dock = DockStyle.Fill;
             ActiveRoomsDGV.GridColor = Color.FromArgb(231, 229, 255);
             ActiveRoomsDGV.Location = new Point(0, 64);
@@ -619,6 +648,8 @@
             // OrderPanel
             // 
             OrderPanel.BackColor = Color.Transparent;
+            OrderPanel.Controls.Add(guna2DataGridView2);
+            OrderPanel.Controls.Add(OrderDVG);
             OrderPanel.Controls.Add(guna2GroupBox1);
             OrderPanel.Controls.Add(guna2ShadowPanel1);
             OrderPanel.Dock = DockStyle.Fill;
@@ -628,6 +659,146 @@
             OrderPanel.ShadowColor = Color.Black;
             OrderPanel.Size = new Size(1379, 595);
             OrderPanel.TabIndex = 5;
+            // 
+            // guna2DataGridView2
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            guna2DataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            guna2DataGridView2.AutoGenerateColumns = false;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            guna2DataGridView2.ColumnHeadersHeight = 22;
+            guna2DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            guna2DataGridView2.Columns.AddRange(new DataGridViewColumn[] { Update, Delete });
+            guna2DataGridView2.DataSource = orderBindingSource;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            guna2DataGridView2.GridColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView2.Location = new Point(827, 94);
+            guna2DataGridView2.Name = "guna2DataGridView2";
+            guna2DataGridView2.RightToLeft = RightToLeft.No;
+            guna2DataGridView2.RowHeadersVisible = false;
+            guna2DataGridView2.RowHeadersWidth = 51;
+            guna2DataGridView2.Size = new Size(552, 447);
+            guna2DataGridView2.TabIndex = 6;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            guna2DataGridView2.ThemeStyle.BackColor = Color.White;
+            guna2DataGridView2.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 22;
+            guna2DataGridView2.ThemeStyle.ReadOnly = false;
+            guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = Color.White;
+            guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            guna2DataGridView2.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = Color.White;
+            guna2DataGridView2.ThemeStyle.RowsStyle.Height = 29;
+            guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            guna2DataGridView2.CellPainting += guna2DataGridView2_CellPainting;
+            // 
+            // Update
+            // 
+            Update.HeaderText = "Update";
+            Update.MinimumWidth = 6;
+            Update.Name = "Update";
+            // 
+            // Delete
+            // 
+            Delete.HeaderText = "Delete";
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
+            // 
+            // OrderDVG
+            // 
+            dataGridViewCellStyle4.BackColor = Color.White;
+            OrderDVG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            OrderDVG.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            OrderDVG.AutoGenerateColumns = false;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            OrderDVG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            OrderDVG.ColumnHeadersHeight = 22;
+            OrderDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            OrderDVG.Columns.AddRange(new DataGridViewColumn[] { Plus, dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, checkoutTimeDataGridViewTextBoxColumn, priceIdDataGridViewTextBoxColumn });
+            OrderDVG.DataSource = ordersBindingSource;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            OrderDVG.DefaultCellStyle = dataGridViewCellStyle7;
+            OrderDVG.GridColor = Color.FromArgb(231, 229, 255);
+            OrderDVG.Location = new Point(247, 94);
+            OrderDVG.Name = "OrderDVG";
+            OrderDVG.ReadOnly = true;
+            OrderDVG.RightToLeft = RightToLeft.No;
+            OrderDVG.RowHeadersVisible = false;
+            OrderDVG.RowHeadersWidth = 51;
+            OrderDVG.Size = new Size(560, 501);
+            OrderDVG.TabIndex = 5;
+            OrderDVG.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            OrderDVG.ThemeStyle.AlternatingRowsStyle.Font = null;
+            OrderDVG.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            OrderDVG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            OrderDVG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            OrderDVG.ThemeStyle.BackColor = Color.White;
+            OrderDVG.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            OrderDVG.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            OrderDVG.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            OrderDVG.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            OrderDVG.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            OrderDVG.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            OrderDVG.ThemeStyle.HeaderStyle.Height = 22;
+            OrderDVG.ThemeStyle.ReadOnly = true;
+            OrderDVG.ThemeStyle.RowsStyle.BackColor = Color.White;
+            OrderDVG.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            OrderDVG.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            OrderDVG.ThemeStyle.RowsStyle.ForeColor = Color.White;
+            OrderDVG.ThemeStyle.RowsStyle.Height = 29;
+            OrderDVG.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            OrderDVG.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            OrderDVG.CellContentClick += guna2DataGridView1_CellContentClick;
+            OrderDVG.CellPainting += guna2DataGridView1_CellPainting;
+            // 
+            // Plus
+            // 
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Plus.DefaultCellStyle = dataGridViewCellStyle6;
+            Plus.HeaderText = "Plus";
+            Plus.MinimumWidth = 6;
+            Plus.Name = "Plus";
+            Plus.ReadOnly = true;
+            Plus.Resizable = DataGridViewTriState.True;
+            Plus.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // guna2GroupBox1
             // 
@@ -829,13 +1000,65 @@
             MenuButtonsPanel.TabIndex = 0;
             MenuButtonsPanel.Paint += guna2CustomGradientPanel1_Paint;
             // 
-            // activeOrderBindingSource2
+            // ordersBindingSource
             // 
-            activeOrderBindingSource2.DataSource = typeof(Models.OrderViewModels.ActiveOrder);
+            ordersBindingSource.DataSource = typeof(DataBase.MainModels.Order.Orders);
             // 
-            // orderBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            orderBindingSource.DataSource = typeof(SysHotel.Models.DataBase.MainModels.Order.Order);
+            dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            dataGridViewTextBoxColumn1.HeaderText = "Id";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "UserId";
+            dataGridViewTextBoxColumn2.HeaderText = "UserId";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "ClientId";
+            dataGridViewTextBoxColumn3.HeaderText = "ClientId";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "RoomNumber";
+            dataGridViewTextBoxColumn4.HeaderText = "RoomNumber";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.DataPropertyName = "EnterTime";
+            dataGridViewTextBoxColumn5.HeaderText = "EnterTime";
+            dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // checkoutTimeDataGridViewTextBoxColumn
+            // 
+            checkoutTimeDataGridViewTextBoxColumn.DataPropertyName = "CheckoutTime";
+            checkoutTimeDataGridViewTextBoxColumn.HeaderText = "CheckoutTime";
+            checkoutTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            checkoutTimeDataGridViewTextBoxColumn.Name = "checkoutTimeDataGridViewTextBoxColumn";
+            checkoutTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceIdDataGridViewTextBoxColumn
+            // 
+            priceIdDataGridViewTextBoxColumn.DataPropertyName = "PriceId";
+            priceIdDataGridViewTextBoxColumn.HeaderText = "PriceId";
+            priceIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            priceIdDataGridViewTextBoxColumn.Name = "priceIdDataGridViewTextBoxColumn";
+            priceIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // AdminForm
             // 
@@ -871,12 +1094,18 @@
             guna2CustomGradientPanel2.ResumeLayout(false);
             guna2CustomGradientPanel2.PerformLayout();
             OrderPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)guna2DataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)orderBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OrderDVG).EndInit();
+            ((System.ComponentModel.ISupportInitialize)orderBindingSource2).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)activeRoomsModelDGVBindingSource).EndInit();
             MenuButtonsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)activeOrderBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)activeOrderBindingSource2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)orderBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)orderBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ordersBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -905,7 +1134,6 @@
         private DataGridViewTextBoxColumn roomIdDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2DataGridView ActiveRoomsDGV;
         private DataGridViewTextBoxColumn Number;
-        private DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn RoomType;
         private Guna.UI2.WinForms.Guna2ShadowPanel ChangeTimeARoomsPanel;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
@@ -926,5 +1154,34 @@
         private BindingSource activeOrderBindingSource1;
         private BindingSource activeOrderBindingSource2;
         private BindingSource orderBindingSource;
+        private Guna.UI2.WinForms.Guna2DataGridView OrderDVG;
+        private BindingSource activeRoomsModelDGVBindingSource;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
+        private DataGridViewButtonColumn genderDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn roomNumberDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passportIdDataGridViewTextBoxColumn;
+        private DataGridViewButtonColumn Update;
+        private DataGridViewButtonColumn Delete;
+        private BindingSource orderBindingSource1;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn roomNumberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn enterTimeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn chickoutTimeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private DataGridViewButtonColumn Plus;
+        private BindingSource orderBindingSource2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn checkoutTimeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceIdDataGridViewTextBoxColumn;
+        private BindingSource ordersBindingSource;
     }
 }

@@ -1,4 +1,4 @@
-﻿using SysHotel.Models.DataBase.MainModels.Order;
+﻿using HotelProject.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace HotelProject.Models.Interfaces
 {
     public interface IClient
     {
-        public List<Order> ActiveRoomsList();
+        public List<Client> ActiveRoomsList();
     }
 }
