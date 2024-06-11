@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using SysHotel.Models.DataBase.MainModels;
 using System.Reflection;
 using System.Collections;
 using System.Data;
@@ -17,8 +16,8 @@ namespace SysHotel.Models.DataBase
 {
     internal class DbContext
     {
-        //static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
-        static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
+        static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
+        //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
 
         public static bool InsertQuery<T>(T model, string schema) where T : new()
         {

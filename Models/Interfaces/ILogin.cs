@@ -1,4 +1,5 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace HotelProject.Models.Interfaces
 {
     public interface ILogin
     {
-        Task<bool> AddUser(Users model);
+        Task<bool> AddUser(Users model,Client client);
     }
 }
