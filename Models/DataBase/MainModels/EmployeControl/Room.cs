@@ -8,12 +8,12 @@ namespace HotelProject.Models.DataBase.MainModels.EmployeControl
 {
     public class Room
     {
-        public int RoomID { get; set; }
-        public string RoomType { get; set; }
+        public long RoomID { get; set; }
+        public string? RoomType { get; set; }
         public int RoomNumber { get; set; }
-        public string PeopleSize { get; set; }
+        public int PeopleSize { get; set; }
+        public int HavePeople { get; set; }
         public double RoomOnePrice { get; set; }
-        public double RoomManyPrice { get; set; }
-        public string RoomDescription { get; set; }
+        public string? RoomDescription { get; set; }
     }
 }

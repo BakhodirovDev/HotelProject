@@ -1,4 +1,6 @@
-﻿using HotelProject.Models.DataBase.MainModels.Order;
+﻿using HotelProject.Models.DataBase.MainModels.EmployeControl;
+using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Interfaces;
 using SysHotel.Models.DataBase;
 using System;
@@ -11,14 +13,37 @@ namespace HotelProject.Models.Services
 {
     public class OrderService : IOrder
     {
-        public List<Orders> ActiveOrderList()
+        public List<Room> ActiveOrderList(bool badOrRoom, string? roomType)
         {
+            string convertBadOrRoom = "havepeople IS NOT NULL";
+            string convertRoomType = "";
+            if(badOrRoom!=false)
+            {
+                convertBadOrRoom = "havepeople=0";
+            }
+            if(roomType!= "Active Rooms" && roomType != "")
+            {
+                convertRoomType = $"and roomtype='{roomType}'";
+            }
             try
             {
-                List<Orders> activeRoomsModelDGV= DbContext.Query<Orders>("select * from \"OrderData\".\"Orders\"");
+                List<Room> activeRoomsModelDGV= DbContext.Query<Room>($"select * from \"EmployeControlData\".Room\r\nwhere {convertBadOrRoom} {convertRoomType}");
                 return activeRoomsModelDGV.ToList();
             }
             catch(Exception ex) 
+            {
+                throw;
+            }
+        }
+        public List<RoomTypes> RoomTypesOrder()
+        {
+            
+            try
+            {
+                List<RoomTypes> RoomTypeOrder = DbContext.Query<RoomTypes>("select   * from RoomTypes");
+                return RoomTypeOrder.ToList();
+            }
+            catch (Exception ex)
             {
                 throw;
             }

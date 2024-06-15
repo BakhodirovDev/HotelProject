@@ -1,4 +1,5 @@
-﻿using HotelProject.Models.DataBase.MainModels.Order;
+﻿using HotelProject.Models.DataBase.MainModels.EmployeControl;
+using HotelProject.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace HotelProject.Models.Interfaces
 {
     public interface IOrder
     {
-        public List<Orders> ActiveOrderList();
+        public List<Room> ActiveOrderList(bool badOrRoom, string roomType);
+        public List<RoomTypes> RoomTypesOrder();
     }
 }
