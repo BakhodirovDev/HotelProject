@@ -1,4 +1,5 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Services;
 using System;
 using System.Collections.Generic;
@@ -21,16 +22,22 @@ namespace HotelProject.Models.Forms.Login
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
+            Client client = new Client();
             Users users = new Users()
             {
-                FirstName=FirstName.Text,
-                LastName=LastName.Text,
-                UserName=UserName.Text,
-                Password=Password.Text,
-                RoleId=1
+                FirstName = FirstName.Text,
+                LastName = LastName.Text,
+                UserName = UserName.Text,
+                Password = Password.Text,
+                RoleId = 1
             };
             LoginService loginService = new LoginService();
-            loginService.AddUser(users);
+            loginService.AddUser(users,client);
+        }
+
+        private void AddUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using SysHotel.Models.DataBase.MainModels;
 using System.Reflection;
 using System.Collections;
 using System.Data;
@@ -17,8 +16,8 @@ namespace SysHotel.Models.DataBase
 {
     internal class DbContext
     {
-        //static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
-        static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
+        static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
+        //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
 
         public static bool InsertQuery<T>(T model, string schema) where T : new()
         {
@@ -162,6 +161,68 @@ namespace SysHotel.Models.DataBase
 
             // Get the value of the property
             return propertyInfo.GetValue(obj);
+        }
+
+
+        // Method to execute SELECT queries and return results as a list of objects
+        public static List<T> ExecuteQuery<T>(string query) where T : new()
+        {
+            try
+            {
+                using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+                connection.Open();
+
+                List<T> res = new List<T>();
+                NpgsqlCommand q = new NpgsqlCommand(query, connection);
+                using NpgsqlDataReader r = q.ExecuteReader();
+
+                while (r.Read())
+                {
+                    T t = new T();
+
+                    for (int inc = 0; inc < r.FieldCount; inc++)
+                    {
+                        Type type = t.GetType();
+                        string namechange = NamaChange<T>(r.GetName(inc));
+
+                        PropertyInfo prop = type.GetProperty(namechange);
+                        if (prop != null && prop.CanWrite)
+                        {
+                            object value = r.IsDBNull(inc) ? null : Convert.ChangeType(r.GetValue(inc), prop.PropertyType);
+                            prop.SetValue(t, value, null);
+                        }
+                    }
+
+                    res.Add(t);
+                }
+
+                return res;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or handle it as needed
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Method to execute INSERT, UPDATE, DELETE queries
+        public static int ExecuteNonQuery(string query)
+        {
+            try
+            {
+                using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+                connection.Open();
+
+                NpgsqlCommand q = new NpgsqlCommand(query, connection);
+                return q.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or handle it as needed
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw;
+            }
         }
 
     }
