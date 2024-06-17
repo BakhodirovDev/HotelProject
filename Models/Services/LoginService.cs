@@ -15,6 +15,11 @@ namespace HotelProject.Models.Services
         {
 			try
 			{
+
+                List<Users> list=DbContext.Query<Users>("select * from public.users");
+
+
+
                 bool result=DbContext.InsertQuery<Users>(model,"public");
                 return Task.FromResult(result);
             }
