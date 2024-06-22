@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace HotelProject.Models.DataBase.MainModels.EmployeControl
 {
-    public  class Rooms
+    public class WorkPlace
     {
         public int Id { get; set; }
-        public int Number { get; set; }
-        public string RoomType { get; set; }
+        public string Type { get; set; }
         public int Price { get; set; }
-
-        public string Status { get; set; }
     }
 }

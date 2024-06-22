@@ -25,10 +25,10 @@ namespace HotelProject.Models.Forms.Manager
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.StartPosition = FormStartPosition.CenterScreen;
-            login.Show();
-            this.Hide();
+            //Login login = new Login();
+            //login.StartPosition = FormStartPosition.CenterScreen;
+            //login.Show();
+            //this.Hide();
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
