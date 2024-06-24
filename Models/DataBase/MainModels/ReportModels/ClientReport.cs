@@ -8,7 +8,7 @@ namespace HotelProject.Models.DataBase.MainModels.ReportModels
 {
     public class ClientReport
     {
-        public int id { get; set; }
+        public string id { get; set; }
         public string FIO { get; set; }
         public DateTime InCome { get; set; }
         public DateTime OutCome { get; set; }
