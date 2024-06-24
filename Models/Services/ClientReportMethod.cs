@@ -1,5 +1,6 @@
 ﻿using HotelProject.Models.DataBase.MainModels.ReportModels;
 using HotelProject.Models.Interfaces;
+using SysHotel.Models.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace HotelProject.Models.Services
         {
             try
             {
-                List<ClientReport> clientReports = new List<ClientReport>();
+                List<ClientReport> clientReports = DbContext.Query<ClientReport>("select * from report_client_mv_new1");
                 return Task.FromResult(clientReports);
             }
             catch (Exception ex)
@@ -40,11 +41,11 @@ namespace HotelProject.Models.Services
         {
             try
             {
-                List<ClientReport> clientReports = new List<ClientReport>();
+                List<ClientReport> clientReports = DbContext.Query<ClientReport>("select * from report_client_mv_new1");
                 List<ClientReport> filterClientReport = new List<ClientReport>();
                 foreach (ClientReport clientReport in clientReports)
                 {
-                    if(clientReport.InCome>=time1 && clientReport.OutCome <= time2)
+                    if(clientReport.entertime>=time1 && clientReport.checkouttime <= time2)
                     {
                         filterClientReport.Add(clientReport);
                     }
