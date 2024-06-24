@@ -48,5 +48,24 @@ namespace HotelProject.Models.Services
                 throw;
             }
         }
+
+        public List<Client> SearchClient(string passportId)
+        {
+
+            try
+            {
+                List<Client> searchClient = DbContext.Query<Client>($"select * from \"OrderData\".\"Client\"\r\nwhere passportid='{passportId}'");
+                return searchClient.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public void AddOrder(Orders order)
+        {
+
+        }
     }
 }

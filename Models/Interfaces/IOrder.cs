@@ -1,4 +1,5 @@
 ﻿using HotelProject.Models.DataBase.MainModels.EmployeControl;
+using HotelProject.Models.DataBase.MainModels.Login;
 using HotelProject.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,7 @@ namespace HotelProject.Models.Interfaces
     {
         public List<Room> ActiveOrderList(bool badOrRoom, string roomType);
         public List<RoomTypes> RoomTypesOrder();
+
+        public List<Client> SearchClient(string passportId);
     }
 }
