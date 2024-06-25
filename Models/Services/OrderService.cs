@@ -63,9 +63,5 @@ namespace HotelProject.Models.Services
             }
         }
 
-        public void AddOrder(Orders order)
-        {
-
-        }
     }
 }
