@@ -127,11 +127,7 @@ namespace SysHotel.Models.DataBase
                 throw new Exception("Error executing query", ex);
             }
         }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7ac233c6c059b7d1476474ba8863bf4a1dafc9eb
         static string NamaChange<T>(string Name) where T : new()
         {
             T t = new T();

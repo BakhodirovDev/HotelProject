@@ -283,7 +283,7 @@ namespace HotelProject.Models.Forms.Admin
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        /*private void guna2Button2_Click(object sender, EventArgs e)
         {
             SearchOneClient = orderService.SearchClient(PasswordIdTextBox.Text);
             if (SearchOneClient.Count >= 1)
@@ -296,7 +296,7 @@ namespace HotelProject.Models.Forms.Admin
             }
 
             SearchOneClient.Clear();
-        }
+        }*/
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
