@@ -1,4 +1,4 @@
-﻿using HotelProject.Models.Services;
+﻿using HotelProject.Models.DataBase.MainModels.ReportModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

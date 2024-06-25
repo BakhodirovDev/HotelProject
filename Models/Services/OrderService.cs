@@ -27,7 +27,7 @@ namespace HotelProject.Models.Services
             }
             try
             {
-                List<Room> activeRoomsModelDGV= DbContext.Query<Room>($"select * from \"EmployeControlData\".Room\r\nwhere {convertBadOrRoom} {convertRoomType}");
+                List<Room> activeRoomsModelDGV= DbContext.Query<Room>($"select * from \"EmployeControlData\".room\r\nwhere {convertBadOrRoom} {convertRoomType}");
                 return activeRoomsModelDGV.ToList();
             }
             catch(Exception ex) 

@@ -11,9 +11,10 @@ namespace HotelProject.Models.DataBase.MainModels.Order
         public int Id { get; set; }
         public int UserId { get; set; }
         public int ClientId { get; set; }
-        public int RoomId { get; set; }
+        public long RoomId { get; set; }
         public DateTime EnterTime { get; set; }
         public DateTime CheckoutTime { get; set; }
-        public int PriceId { get; set; }
+        public long PriceId { get; set; }
+        public long? OldId { get; set; }
     }
 }
