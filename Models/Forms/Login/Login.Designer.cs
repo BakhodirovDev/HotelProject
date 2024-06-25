@@ -62,10 +62,9 @@
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges2;
             guna2CustomGradientPanel1.Dock = DockStyle.Top;
             guna2CustomGradientPanel1.Location = new Point(0, 0);
-            guna2CustomGradientPanel1.Margin = new Padding(2, 2, 2, 2);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            guna2CustomGradientPanel1.Size = new Size(970, 32);
+            guna2CustomGradientPanel1.Size = new Size(1396, 53);
             guna2CustomGradientPanel1.TabIndex = 1;
             guna2CustomGradientPanel1.Paint += guna2CustomGradientPanel1_Paint;
             // 
@@ -76,12 +75,11 @@
             CloseBTN.Image = HotelProject.Properties.Resources.close;
             CloseBTN.ImageOffset = new Point(0, 0);
             CloseBTN.ImageRotate = 0F;
-            CloseBTN.Location = new Point(944, 0);
-            CloseBTN.Margin = new Padding(2, 2, 2, 2);
+            CloseBTN.Location = new Point(1329, 3);
             CloseBTN.Name = "CloseBTN";
             CloseBTN.PressedState.ImageSize = new Size(64, 64);
             CloseBTN.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            CloseBTN.Size = new Size(45, 31);
+            CloseBTN.Size = new Size(64, 52);
             CloseBTN.TabIndex = 0;
             CloseBTN.Click += CloseBTN_Click;
             // 
@@ -92,11 +90,10 @@
             guna2CustomGradientPanel2.Controls.Add(pictureBox1);
             guna2CustomGradientPanel2.CustomizableEdges = customizableEdges10;
             guna2CustomGradientPanel2.Dock = DockStyle.Fill;
-            guna2CustomGradientPanel2.Location = new Point(0, 32);
-            guna2CustomGradientPanel2.Margin = new Padding(2, 2, 2, 2);
+            guna2CustomGradientPanel2.Location = new Point(0, 53);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2CustomGradientPanel2.Size = new Size(970, 418);
+            guna2CustomGradientPanel2.Size = new Size(1396, 697);
             guna2CustomGradientPanel2.TabIndex = 3;
             // 
             // panel1
@@ -109,10 +106,9 @@
             panel1.Controls.Add(Username);
             panel1.Controls.Add(UsernameLB);
             panel1.Controls.Add(MainLB);
-            panel1.Location = new Point(642, 4);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Location = new Point(917, 7);
             panel1.Name = "panel1";
-            panel1.Size = new Size(320, 407);
+            panel1.Size = new Size(467, 678);
             panel1.TabIndex = 2;
             // 
             // LoginBTN
@@ -126,11 +122,10 @@
             LoginBTN.FillColor = Color.DarkOrange;
             LoginBTN.Font = new Font("Palatino Linotype", 15F, FontStyle.Bold);
             LoginBTN.ForeColor = Color.White;
-            LoginBTN.Location = new Point(76, 299);
-            LoginBTN.Margin = new Padding(2, 2, 2, 2);
+            LoginBTN.Location = new Point(109, 498);
             LoginBTN.Name = "LoginBTN";
             LoginBTN.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            LoginBTN.Size = new Size(189, 41);
+            LoginBTN.Size = new Size(270, 68);
             LoginBTN.TabIndex = 5;
             LoginBTN.Text = "Login";
             LoginBTN.CheckedChanged += LoginBTN_CheckedChanged;
@@ -150,14 +145,14 @@
             Password.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Password.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold);
             Password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Password.Location = new Point(10, 208);
-            Password.Margin = new Padding(4, 4, 4, 4);
+            Password.Location = new Point(14, 347);
+            Password.Margin = new Padding(6, 7, 6, 7);
             Password.Name = "Password";
             Password.PasswordChar = '*';
             Password.PlaceholderText = "Enter Password";
             Password.SelectedText = "";
             Password.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            Password.Size = new Size(301, 38);
+            Password.Size = new Size(430, 63);
             Password.TabIndex = 4;
             Password.TextChanged += Password_TextChanged;
             // 
@@ -166,10 +161,9 @@
             PasswordLB.BackColor = Color.Transparent;
             PasswordLB.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold);
             PasswordLB.ForeColor = Color.DarkOrange;
-            PasswordLB.Location = new Point(10, 182);
-            PasswordLB.Margin = new Padding(2, 2, 2, 2);
+            PasswordLB.Location = new Point(14, 303);
             PasswordLB.Name = "PasswordLB";
-            PasswordLB.Size = new Size(75, 24);
+            PasswordLB.Size = new Size(108, 34);
             PasswordLB.TabIndex = 3;
             PasswordLB.Text = "Password";
             // 
@@ -185,14 +179,14 @@
             Username.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Username.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold);
             Username.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Username.Location = new Point(10, 129);
-            Username.Margin = new Padding(4, 4, 4, 4);
+            Username.Location = new Point(14, 215);
+            Username.Margin = new Padding(6, 7, 6, 7);
             Username.Name = "Username";
             Username.PasswordChar = '\0';
             Username.PlaceholderText = "Enter Username";
             Username.SelectedText = "";
             Username.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            Username.Size = new Size(301, 38);
+            Username.Size = new Size(430, 63);
             Username.TabIndex = 2;
             Username.TextChanged += Username_TextChanged;
             // 
@@ -201,10 +195,9 @@
             UsernameLB.BackColor = Color.Transparent;
             UsernameLB.Font = new Font("Palatino Linotype", 12F, FontStyle.Bold);
             UsernameLB.ForeColor = Color.DarkOrange;
-            UsernameLB.Location = new Point(10, 103);
-            UsernameLB.Margin = new Padding(2, 2, 2, 2);
+            UsernameLB.Location = new Point(14, 172);
             UsernameLB.Name = "UsernameLB";
-            UsernameLB.Size = new Size(78, 24);
+            UsernameLB.Size = new Size(114, 34);
             UsernameLB.TabIndex = 1;
             UsernameLB.Text = "Username";
             // 
@@ -213,32 +206,31 @@
             MainLB.BackColor = Color.Transparent;
             MainLB.Font = new Font("Palatino Linotype", 24F, FontStyle.Bold);
             MainLB.ForeColor = Color.DarkOrange;
-            MainLB.Location = new Point(57, 19);
-            MainLB.Margin = new Padding(2, 2, 2, 2);
+            MainLB.Location = new Point(81, 32);
             MainLB.Name = "MainLB";
-            MainLB.Size = new Size(200, 46);
+            MainLB.Size = new Size(298, 67);
             MainLB.TabIndex = 0;
             MainLB.Text = "Hotel System";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = HotelProject.Properties.Resources.Login;
-            pictureBox1.Location = new Point(-33, -13);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Location = new Point(-47, -22);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(699, 430);
+            pictureBox1.Size = new Size(999, 717);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(970, 450);
+            ClientSize = new Size(1396, 750);
             Controls.Add(guna2CustomGradientPanel2);
             Controls.Add(guna2CustomGradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

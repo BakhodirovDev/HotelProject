@@ -23,7 +23,7 @@ namespace HotelProject.Models.Forms.Admin
         public bool TimePanel = false;
         public bool MenuPanel = false;
         OrderService orderService = new OrderService();
-        public AdminForm(int id)
+        public AdminForm(long id)
         {
             InitializeComponent();
             AddRoomTypes();
