@@ -283,9 +283,9 @@ namespace HotelProject.Models.Forms.Admin
 
         }
 
-        /*private void guna2Button2_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
-            SearchOneClient = orderService.SearchClient(PasswordIdTextBox.Text);
+            /*SearchOneClient = orderService.SearchClient(PasswordIdTextBox.Text);
             if (SearchOneClient.Count >= 1)
             {
                 IsmTextBox.Text = SearchOneClient[0].FirstName;
@@ -295,8 +295,8 @@ namespace HotelProject.Models.Forms.Admin
                 GenderComboBox.Text = SearchOneClient[0].Gender;
             }
 
-            SearchOneClient.Clear();
-        }*/
+            SearchOneClient.Clear();*/
+        }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
