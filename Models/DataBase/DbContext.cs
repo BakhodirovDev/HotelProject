@@ -104,8 +104,16 @@ namespace SysHotel.Models.DataBase
 
                         PropertyInfo prop = type.GetProperty(namechange);
 
-                        prop.SetValue(t, Convert.ChangeType(r.GetValue(inc), r.GetFieldType(inc)), null);
-                        prop.SetValue(t, r.GetValue(inc), null);
+                        if (prop != null && prop.CanWrite)
+                        {
+                            object value = r.GetValue(inc);
+
+                            if (value != DBNull.Value)
+                            {
+                                value = Convert.ChangeType(value, prop.PropertyType);
+                                prop.SetValue(t, value, null);
+                            }
+                        }
                     }
 
                     res.Add(t);
@@ -114,11 +122,16 @@ namespace SysHotel.Models.DataBase
 
                 return res;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Error executing query", ex);
             }
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7ac233c6c059b7d1476474ba8863bf4a1dafc9eb
         static string NamaChange<T>(string Name) where T : new()
         {
             T t = new T();
