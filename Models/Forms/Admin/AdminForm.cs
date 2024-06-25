@@ -29,6 +29,7 @@ namespace HotelProject.Models.Forms.Admin
         List<Client> ThisRoomClients = new List<Client>();
         List<Orders> OneRoomOrders = new List<Orders>();
 
+        List<Client> OrdersAddRooms = new List<Client>();
 
         public bool TimePanel = false;
         public bool MenuPanel = false;
@@ -179,6 +180,8 @@ namespace HotelProject.Models.Forms.Admin
                 AddOrderPanel.Visible = true;
                 AddOrderPanel.Dock = DockStyle.Fill;
                 AddOrderPanel.BringToFront();
+                AddOrderPanel.Refresh();
+                OrderDVG.Refresh();
             }
         }
 
@@ -263,24 +266,20 @@ namespace HotelProject.Models.Forms.Admin
                     Gender = GenderComboBox.Text
                 };
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Malumotlarni to'liq kiriting!!!");
             }
             Client HaveClient = new Client();
-            HaveClient=ThisRoomClients.Find(x => x.PassportId == client.PassportId);
+            HaveClient = ThisRoomClients.Find(x => x.PassportId == client.PassportId);
 
-            if(HaveClient==null || ThisRoomClients==null )
+            if (HaveClient == null || ThisRoomClients == null)
                 ThisRoomClients.Add(client);
 
             ThisRoomOrdersDGV.DataSource = null;
             ThisRoomOrdersDGV.DataSource = ThisRoomClients;
 
             ClearText();
-        }
-        private void AddClentList()
-        {
-
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -316,6 +315,19 @@ namespace HotelProject.Models.Forms.Admin
             PhoneNumberTextBox.Text = string.Empty;
             TogilganYilTextBox.Text = string.Empty;
             GenderComboBox.SelectedIndex = -1;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            OrdersAddRooms.AddRange(ThisRoomClients);
+            ClearText();
+            ActiveRoomsPanel.Visible = false;
+            OrderPanel.Visible = true;
+            AddOrderPanel.Visible = false;
+            OrderPanel.Dock = DockStyle.Fill;
+            OrderPanel.BringToFront();
+            ThisRoomClients.Clear();
+
         }
     }
 }

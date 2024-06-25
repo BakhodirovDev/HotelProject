@@ -1144,7 +1144,7 @@
             BorderAFNotificationPaint1.FillColor = Color.FromArgb(255, 255, 192);
             BorderAFNotificationPaint1.Font = new Font("Segoe UI", 8.23F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline | FontStyle.Strikeout, GraphicsUnit.Point, 100, true);
             BorderAFNotificationPaint1.ForeColor = Color.PeachPuff;
-            BorderAFNotificationPaint1.Location = new Point(0, 346);
+            BorderAFNotificationPaint1.Location = new Point(0, 350);
             BorderAFNotificationPaint1.TargetControl = this;
             BorderAFNotificationPaint1.Text = "";
             // 
@@ -1197,7 +1197,7 @@
             LogOutButton.Image = (Image)resources.GetObject("LogOutButton.Image");
             LogOutButton.ImageAlign = HorizontalAlignment.Right;
             LogOutButton.ImageSize = new Size(35, 35);
-            LogOutButton.Location = new Point(0, 527);
+            LogOutButton.Location = new Point(0, 534);
             LogOutButton.Name = "LogOutButton";
             LogOutButton.ShadowDecoration.CustomizableEdges = customizableEdges56;
             LogOutButton.Size = new Size(68, 68);
@@ -1216,7 +1216,7 @@
             MenuButtonsPanel.Location = new Point(8, 108);
             MenuButtonsPanel.Name = "MenuButtonsPanel";
             MenuButtonsPanel.ShadowDecoration.CustomizableEdges = customizableEdges60;
-            MenuButtonsPanel.Size = new Size(68, 595);
+            MenuButtonsPanel.Size = new Size(68, 602);
             MenuButtonsPanel.TabIndex = 0;
             // 
             // AddOrderPanel
@@ -1231,7 +1231,7 @@
             AddOrderPanel.Location = new Point(76, 108);
             AddOrderPanel.Name = "AddOrderPanel";
             AddOrderPanel.ShadowColor = Color.Black;
-            AddOrderPanel.Size = new Size(1379, 595);
+            AddOrderPanel.Size = new Size(1379, 602);
             AddOrderPanel.TabIndex = 6;
             // 
             // ThisRoomOrdersDGV
@@ -1279,7 +1279,7 @@
             dataGridViewCellStyle5.ForeColor = Color.Black;
             dataGridViewCellStyle5.SelectionForeColor = Color.Black;
             ThisRoomOrdersDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            ThisRoomOrdersDGV.Size = new Size(463, 545);
+            ThisRoomOrdersDGV.Size = new Size(463, 552);
             ThisRoomOrdersDGV.TabIndex = 13;
             ThisRoomOrdersDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             ThisRoomOrdersDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1386,7 +1386,7 @@
             guna2ShadowPanel2.Location = new Point(312, 50);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.Size = new Size(604, 545);
+            guna2ShadowPanel2.Size = new Size(604, 552);
             guna2ShadowPanel2.TabIndex = 12;
             // 
             // guna2HtmlLabel7
@@ -1432,6 +1432,7 @@
             guna2Button6.Size = new Size(455, 49);
             guna2Button6.TabIndex = 13;
             guna2Button6.Text = "Room add order";
+            guna2Button6.Click += guna2Button6_Click;
             // 
             // guna2Button5
             // 
@@ -1671,7 +1672,7 @@
             RoomDiscriptionAddOrderTextBox.RightToLeft = RightToLeft.No;
             RoomDiscriptionAddOrderTextBox.SelectedText = "";
             RoomDiscriptionAddOrderTextBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            RoomDiscriptionAddOrderTextBox.Size = new Size(312, 545);
+            RoomDiscriptionAddOrderTextBox.Size = new Size(312, 552);
             RoomDiscriptionAddOrderTextBox.TabIndex = 11;
             // 
             // RoomNameAddOrderTextBox
@@ -1711,7 +1712,7 @@
             AutoScrollMinSize = new Size(10, 10);
             AutoSize = true;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1463, 711);
+            ClientSize = new Size(1463, 718);
             Controls.Add(AddOrderPanel);
             Controls.Add(OrderPanel);
             Controls.Add(ActiveRoomsPanel);
