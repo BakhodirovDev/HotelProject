@@ -14,6 +14,5 @@ namespace HotelProject.Models.Interfaces
         Task<bool> AddUser(Users model,Client client);
         ReturnLoginViewModel CheckLogin(string login, string pass);
 
-        ReturnLoginViewModel UpdateLogin(Users model);
     }
 }

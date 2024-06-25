@@ -13,7 +13,7 @@ namespace HotelProject.Models.Forms.Manager
 {
     public partial class ManagerForm : Form
     {
-        public ManagerForm(int ID)
+        public ManagerForm(long ID)
         {
             InitializeComponent();
         }
