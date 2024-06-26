@@ -10,9 +10,7 @@ namespace HotelProject.Models.Interfaces
 {
     public interface IDeleteOrder
     {
-        public void CheckOutOrder(Orders order)
-        {
-            DbContext.ChangeQueryById(order, "UPDATE \"OrderData\".\"Orders\"\r\nSET checkouttime = now()\r\nWHERE id = 1;");
-        }
+        public void CheckOutOrder(Orders order);
+        
     }
 }
