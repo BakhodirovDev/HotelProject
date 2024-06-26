@@ -24,7 +24,7 @@ namespace HotelProject.Models.Services
                 {
                     UserId = newUserId,
                     ClientId = order.ClientId,
-                    RoomId = newRoom.RoomID,
+                    RoomId = newRoom.RoomId,
                     EnterTime = order.EnterTime,
                     CheckoutTime = order.CheckoutTime,
                     OldId = order.Id,
