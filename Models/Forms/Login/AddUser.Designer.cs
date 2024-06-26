@@ -37,52 +37,57 @@
             // 
             // FirstName
             // 
-            FirstName.Location = new Point(138, 12);
+            FirstName.Location = new Point(158, 16);
+            FirstName.Margin = new Padding(3, 4, 3, 4);
             FirstName.Name = "FirstName";
-            FirstName.Size = new Size(441, 23);
+            FirstName.Size = new Size(503, 27);
             FirstName.TabIndex = 0;
             // 
             // Password
             // 
-            Password.Location = new Point(138, 155);
+            Password.Location = new Point(158, 207);
+            Password.Margin = new Padding(3, 4, 3, 4);
             Password.Name = "Password";
-            Password.Size = new Size(441, 23);
+            Password.Size = new Size(503, 27);
             Password.TabIndex = 1;
             // 
             // UserName
             // 
-            UserName.Location = new Point(138, 111);
+            UserName.Location = new Point(158, 148);
+            UserName.Margin = new Padding(3, 4, 3, 4);
             UserName.Name = "UserName";
-            UserName.Size = new Size(441, 23);
+            UserName.Size = new Size(503, 27);
             UserName.TabIndex = 2;
             // 
             // LastName
             // 
-            LastName.Location = new Point(138, 62);
+            LastName.Location = new Point(158, 83);
+            LastName.Margin = new Padding(3, 4, 3, 4);
             LastName.Name = "LastName";
-            LastName.Size = new Size(441, 23);
+            LastName.Size = new Size(503, 27);
             LastName.TabIndex = 3;
             // 
             // btnAddUser
             // 
-            btnAddUser.Location = new Point(138, 225);
+            btnAddUser.Location = new Point(158, 300);
+            btnAddUser.Margin = new Padding(3, 4, 3, 4);
             btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(441, 23);
+            btnAddUser.Size = new Size(504, 31);
             btnAddUser.TabIndex = 4;
             btnAddUser.Text = "AddUser";
             btnAddUser.UseVisualStyleBackColor = true;
-            btnAddUser.Click += btnAddUser_Click;
             // 
             // AddUser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(btnAddUser);
             Controls.Add(LastName);
             Controls.Add(UserName);
             Controls.Add(Password);
             Controls.Add(FirstName);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AddUser";
             Text = "AddUser";
             ResumeLayout(false);

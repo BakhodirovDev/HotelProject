@@ -61,6 +61,7 @@
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            panel1 = new Panel();
             guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2CustomGradientPanel1.SuspendLayout();
@@ -129,6 +130,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            guna2CustomGradientPanel1.Controls.Add(panel1);
             guna2CustomGradientPanel1.Controls.Add(guna2CustomGradientPanel3);
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges20;
             guna2CustomGradientPanel1.Dock = DockStyle.Fill;
@@ -196,7 +198,7 @@
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2Button5.Size = new Size(300, 68);
             guna2Button5.TabIndex = 5;
-            guna2Button5.Text = "guna2Button5";
+            guna2Button5.Text = "Update Employe";
             // 
             // guna2Button4
             // 
@@ -215,7 +217,7 @@
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges11;
             guna2Button4.Size = new Size(300, 68);
             guna2Button4.TabIndex = 4;
-            guna2Button4.Text = "guna2Button4";
+            guna2Button4.Text = "Add Employe";
             // 
             // guna2Button3
             // 
@@ -234,7 +236,7 @@
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges13;
             guna2Button3.Size = new Size(300, 68);
             guna2Button3.TabIndex = 3;
-            guna2Button3.Text = "guna2Button3";
+            guna2Button3.Text = "Work Place Report";
             // 
             // guna2Button2
             // 
@@ -253,7 +255,7 @@
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges15;
             guna2Button2.Size = new Size(300, 68);
             guna2Button2.TabIndex = 2;
-            guna2Button2.Text = "guna2Button2";
+            guna2Button2.Text = "Attendance Report";
             guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button1
@@ -274,6 +276,13 @@
             guna2Button1.Size = new Size(300, 68);
             guna2Button1.TabIndex = 1;
             guna2Button1.Text = "Dashboard";
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(318, 23);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(300, 150);
+            panel1.TabIndex = 1;
             // 
             // ManagerForm
             // 
@@ -307,5 +316,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Panel panel1;
     }
 }

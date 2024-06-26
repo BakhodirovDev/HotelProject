@@ -1,5 +1,4 @@
 ﻿using HotelProject.Models.DataBase.MainModels.EmployeControl;
-using HotelProject.Models.DataBase.MainModels.Login;
 using HotelProject.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
@@ -9,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace HotelProject.Models.Interfaces
 {
-    public interface IOrder
+    public interface IChangeRoomUser
     {
-        public List<Room> ActiveOrderList(bool badOrRoom, string roomType);
-        public List<RoomTypes> RoomTypesOrder();
-
-        public List<Client> SearchClient(string passportId);
+            Task<bool> ChangeRoomAndExtendStay(Orders order, Room newRoom, int newUserId, long newPriceId);
     }
 }

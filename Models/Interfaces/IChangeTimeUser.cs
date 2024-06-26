@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace HotelProject.Models.Interfaces
 {
-    public interface IClient
+    public  interface IChangeTimeUser
     {
-        public List<Client> ActiveRoomsList();
+            Task<bool> ChangeRoomAndExtendStay(Orders order, DateTime newCheckoutTime, int newUserId, long newPriceId);
     }
 }

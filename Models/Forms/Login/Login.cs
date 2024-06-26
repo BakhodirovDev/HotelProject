@@ -1,9 +1,10 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Login;
+using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Forms.Admin;
 using HotelProject.Models.Forms.Manager;
+using HotelProject.Models.Services;
 using Microsoft.VisualBasic.ApplicationServices;
 using SysHotel.Models.DataBase;
-using SysHotel.Models.DataBase.MainModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SysHotel.Models.Forms.Login
 {
@@ -39,7 +41,32 @@ namespace SysHotel.Models.Forms.Login
 
         private void LoginBTN_Click(object sender, EventArgs e)
         {
-
+            AuthService loginService = new AuthService();
+            var loginResult = loginService.CheckLogin(Username.Text, Password.Text);
+            if (loginResult != null)
+            {
+                if (loginResult.Role == "Manager")
+                {
+                    ManagerForm managerForm = new ManagerForm(loginResult.Id);
+                    managerForm.Show();
+                    this.Hide();
+                }
+                if (loginResult.Role == "Admin")
+                {
+                    AdminForm adminForm = new AdminForm(loginResult.Id);
+                    adminForm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Console.WriteLine("User is not a Manager. Role: " + loginResult.Role);
+                    // Boshqa rollar uchun kodni bu yerda yozishingiz mumkin
+                }
+            }
+            else
+            {
+                Console.WriteLine("Login failed or an error occurred.");
+            }
 
         }
         private void Username_TextChanged(object sender, EventArgs e)
