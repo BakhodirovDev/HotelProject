@@ -104,7 +104,6 @@ namespace HotelProject.Models.Services
 
         public long PaymentOrder(OrderMoneyDetails orderMoneyDetails)
         {
-
             DbContext.InsertQuery(orderMoneyDetails, "\"OrderData\".\"OrderMoneyDetails\"");
             
             List<OrderMoneyDetails>  detailsMoney = DbContext.Query<OrderMoneyDetails>($"SELECT * FROM \"OrderData\".\"OrderMoneyDetails\"\r\nORDER BY id DESC\r\nLIMIT 1;");
