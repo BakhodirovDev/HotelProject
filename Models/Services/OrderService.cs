@@ -27,7 +27,7 @@ namespace HotelProject.Models.Services
             }
             try
             {
-                List<Room> activeRoomsModelDGV= DbContext.Query<Room>($"select * from \"EmployeControlData\".Room\r\nwhere {convertBadOrRoom} {convertRoomType}");
+                List<Room> activeRoomsModelDGV= DbContext.Query<Room>($"select * from \"EmployeControlData\".room\r\nwhere {convertBadOrRoom} {convertRoomType}");
                 return activeRoomsModelDGV.ToList();
             }
             catch(Exception ex) 
@@ -48,5 +48,20 @@ namespace HotelProject.Models.Services
                 throw;
             }
         }
+
+        public List<Client> SearchClient(string passportId)
+        {
+
+            try
+            {
+                List<Client> searchClient = DbContext.Query<Client>($"select * from \"OrderData\".\"Client\"\r\nwhere passportid='{passportId}'");
+                return searchClient.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

@@ -12,6 +12,7 @@
     <PackageReference Include="Guna.Charts.WinForms" Version="1.0.9" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
     <PackageReference Include="Npgsql" Version="8.0.3" />
+    <PackageReference Include="RavenDB.Database" Version="3.5.9" />
   </ItemGroup>
 
   <ItemGroup>

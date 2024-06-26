@@ -8,9 +8,9 @@ namespace HotelProject.Models.DataBase.MainModels.Login.ViewModels
 {
     public class ReturnLoginViewModel
     {
-        public bool result { get; set; }
-        public string Message{ get; set; }
-
-        public Users? User {  get; set; }
+        public long Id { get; set; }
+        public string Role { get; set; }
     }
+
 }
+

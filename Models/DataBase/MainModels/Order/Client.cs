@@ -8,7 +8,7 @@ namespace HotelProject.Models.DataBase.MainModels.Order
 {
     public class Client
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public int YearOfCompletion { get; set; }

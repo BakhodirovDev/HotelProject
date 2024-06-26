@@ -19,6 +19,7 @@ namespace SysHotel.Models.DataBase
         static string connectionString = "Host=hotel-project-bbahodirov005.i.aivencloud.com;Port=12815;Database=defaultdb;Username=avnadmin;Password=AVNS_30IUYMHOZMenPstqonv;";
         //static string connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres;";
 
+        public static string GetConnectionString() { return connectionString; }
         public static bool InsertQuery<T>(T model, string schema) where T : new()
         {
             using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
@@ -44,7 +45,42 @@ namespace SysHotel.Models.DataBase
             connection.Close();
             return true;
         }
+        public static T ExecuteQuery<T>(string sql, Dictionary<string, object> parameters, Func<IDataReader, T> mapFunction, out string errorMessage)
+        {
+            errorMessage = null;
+            try
+            {
+                using (var conn = new NpgsqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        // Parametrlarni qo'shish
+                        foreach (var param in parameters)
+                        {
+                            cmd.Parameters.AddWithValue(param.Key, param.Value);
+                        }
 
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return mapFunction(reader);
+                            }
+                            else
+                            {
+                                return default;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                return default;
+            }
+        }
         public static List<T> Query<T>(string query) where T : new()
         {
             try
@@ -68,8 +104,16 @@ namespace SysHotel.Models.DataBase
 
                         PropertyInfo prop = type.GetProperty(namechange);
 
-                        prop.SetValue(t, Convert.ChangeType(r.GetValue(inc), r.GetFieldType(inc)), null);
-                        prop.SetValue(t, r.GetValue(inc), null);
+                        if (prop != null && prop.CanWrite)
+                        {
+                            object value = r.GetValue(inc);
+
+                            if (value != DBNull.Value)
+                            {
+                                value = Convert.ChangeType(value, prop.PropertyType);
+                                prop.SetValue(t, value, null);
+                            }
+                        }
                     }
 
                     res.Add(t);
@@ -78,9 +122,9 @@ namespace SysHotel.Models.DataBase
 
                 return res;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Error executing query", ex);
             }
         }
 
@@ -162,8 +206,6 @@ namespace SysHotel.Models.DataBase
             // Get the value of the property
             return propertyInfo.GetValue(obj);
         }
-
-
         // Method to execute SELECT queries and return results as a list of objects
         public static List<T> ExecuteQuery<T>(string query) where T : new()
         {
@@ -205,7 +247,6 @@ namespace SysHotel.Models.DataBase
                 throw;
             }
         }
-
         // Method to execute INSERT, UPDATE, DELETE queries
         public static int ExecuteNonQuery(string query)
         {
