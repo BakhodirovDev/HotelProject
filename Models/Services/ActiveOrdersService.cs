@@ -1,7 +1,6 @@
 ﻿using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Interfaces;
 using SysHotel.Models.DataBase;
-using SysHotel.Models.DataBase.MainModels.Order;
 using System;
 using System.Collections.Generic;
 using System.Linq;
