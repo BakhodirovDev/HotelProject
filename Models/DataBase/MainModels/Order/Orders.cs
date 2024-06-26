@@ -16,5 +16,6 @@ namespace HotelProject.Models.DataBase.MainModels.Order
         public DateTime CheckoutTime { get; set; }
         public long PriceId { get; set; }
         public long? OldId { get; set; }
+        public long? SubClientId { get; set; }
     }
 }

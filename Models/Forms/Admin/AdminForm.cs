@@ -27,7 +27,7 @@ namespace HotelProject.Models.Forms.Admin
         List<Room> SearchOneRoom = new List<Room>();
 
         List<Client> ThisRoomClients = new List<Client>();
-        List<Orders> OneRoomOrders = new List<Orders>();
+        List<Orders> NewOrders = new List<Orders>();
 
         List<Client> OrdersAddRooms = new List<Client>();
 
@@ -72,8 +72,8 @@ namespace HotelProject.Models.Forms.Admin
             {
 
                 // Tanlovni bekor qilish va bugungi sanaga o'rnatish
-                monthCalendar1.SetDate(DateTime.Today);
-                monthCalendar1.AddBoldedDate(DateTime.Today.AddDays(-1));
+                //monthCalendar1.SetDate(DateTime.Today);
+                //monthCalendar1.AddBoldedDate(DateTime.Today.AddDays(-1));
             }
         }
 
@@ -319,14 +319,18 @@ namespace HotelProject.Models.Forms.Admin
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            OrdersAddRooms.AddRange(ThisRoomClients);
+
+            ThisRoomOrdersDGV.DataSource = null;
+            ThisRoomClients.Clear();
             ClearText();
-            ActiveRoomsPanel.Visible = false;
             OrderPanel.Visible = true;
             AddOrderPanel.Visible = false;
             OrderPanel.Dock = DockStyle.Fill;
             OrderPanel.BringToFront();
-            ThisRoomClients.Clear();
+        }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }
