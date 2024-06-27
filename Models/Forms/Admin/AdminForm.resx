@@ -123,13 +123,60 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>49</value>
   </metadata>
+  <metadata name="RoomNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Update.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clientBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>807, 99</value>
+  </metadata>
+  <metadata name="ManyPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Plus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="roomBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 99</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SearchOrderButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvt
+        lVERgzAQRJGAFCQgCQk4aCXUQSsBByChDooDuks2nZQBjgT4at/MDiSzd5dMuJD9BsMwlNAFaiEP3zlX
+        ypYGEuTQHbKgJ1fYdhgEhSu3oDeuEAK6MTSOVuE2MNcuJolaadaBsXf+JF5KswxMhfPuolC6eWConO/D
+        Q/JYY1Ip3TwwfJ2Hpjk/ouHiWKyfCwzTnbAHwl6xxsTcyflnQmDa83X1SrMOjOf3CYE5peM7hW8DAby7
+        Ygsl3V8sNO2BOejxC4ovRBDE/8kVCnf2hG7Q+CXhGe48rdAWmBj6F4qHiSFfqNH08SA5CzWQfc0cQ5a9
+        AcSvH0EX46DsAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="dataGridViewButtonColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewButtonColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvt
+        lVERgzAQRJGAFCQgCQk4aCXUQSsBByChDooDuks2nZQBjgT4at/MDiSzd5dMuJD9BsMwlNAFaiEP3zlX
+        ypYGEuTQHbKgJ1fYdhgEhSu3oDeuEAK6MTSOVuE2MNcuJolaadaBsXf+JF5KswxMhfPuolC6eWConO/D
+        Q/JYY1Ip3TwwfJ2Hpjk/ouHiWKyfCwzTnbAHwl6xxsTcyflnQmDa83X1SrMOjOf3CYE5peM7hW8DAby7
+        Ygsl3V8sNO2BOejxC4ovRBDE/8kVCnf2hG7Q+CXhGe48rdAWmBj6F4qHiSFfqNH08SA5CzWQfc0cQ5a9
+        AcSvH0EX46DsAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="RoomType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAATRJREFUSEvl
@@ -180,53 +227,6 @@
         g2kbsN9oy3GweZhjYrxDb2+MZ74A62RQeRsYJ4ifJdfeKRL0fe4dFb2A4ukoegG17mwpeg2avIfV0Y9I
         UT4w8W5+QlE+8Px9yBVKvynrqZev2afPUJQPPPkQXmB6vkgkX7NPn6EoH3jqEENRPvDUIYaifOCpQwxF
         +cBThxiK8oEnH1LCU1E+MPU0zvYyekWJEF5K8BlZ6a0FtAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="dataGridViewButtonColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewButtonColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clientBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>807, 99</value>
-  </metadata>
-  <data name="guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvt
-        lVERgzAQRJGAFCQgCQk4aCXUQSsBByChDooDuks2nZQBjgT4at/MDiSzd5dMuJD9BsMwlNAFaiEP3zlX
-        ypYGEuTQHbKgJ1fYdhgEhSu3oDeuEAK6MTSOVuE2MNcuJolaadaBsXf+JF5KswxMhfPuolC6eWConO/D
-        Q/JYY1Ip3TwwfJ2Hpjk/ouHiWKyfCwzTnbAHwl6xxsTcyflnQmDa83X1SrMOjOf3CYE5peM7hW8DAby7
-        Ygsl3V8sNO2BOejxC4ovRBDE/8kVCnf2hG7Q+CXhGe48rdAWmBj6F4qHiSFfqNH08SA5CzWQfc0cQ5a9
-        AcSvH0EX46DsAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="Update.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="orderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>499, 58</value>
-  </metadata>
-  <metadata name="ManyPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Plus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="roomBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>215, 99</value>
-  </metadata>
-  <data name="SearchOrderButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAPhJREFUSEvt
-        lVERgzAQRJGAFCQgCQk4aCXUQSsBByChDooDuks2nZQBjgT4at/MDiSzd5dMuJD9BsMwlNAFaiEP3zlX
-        ypYGEuTQHbKgJ1fYdhgEhSu3oDeuEAK6MTSOVuE2MNcuJolaadaBsXf+JF5KswxMhfPuolC6eWConO/D
-        Q/JYY1Ip3TwwfJ2Hpjk/ouHiWKyfCwzTnbAHwl6xxsTcyflnQmDa83X1SrMOjOf3CYE5peM7hW8DAby7
-        Ygsl3V8sNO2BOejxC4ovRBDE/8kVCnf2hG7Q+CXhGe48rdAWmBj6F4qHiSFfqNH08SA5CzWQfc0cQ5a9
-        AcSvH0EX46DsAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="LogOutButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -282,6 +282,9 @@
         XiunJQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="orderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>499, 58</value>
+  </metadata>
   <metadata name="BorderAFNotificationPaint1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>198, 17</value>
   </metadata>
