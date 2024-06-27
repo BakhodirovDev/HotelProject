@@ -31,5 +31,16 @@ namespace HotelProject.Models.Services
             }
             return types;
         }
+        public int GetPrice(string employeType)
+        {
+            foreach (WorkPlace workPlace in WorkPlaceList())
+            {
+                if (employeType == workPlace.Type)
+                {
+                    return workPlace.Price;
+                }
+            }
+            return 0;
+        }
     }
 }

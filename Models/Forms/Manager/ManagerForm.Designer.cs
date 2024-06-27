@@ -81,15 +81,6 @@
             btSearch = new Button();
             txSearch = new TextBox();
             dataGridView1 = new DataGridView();
-            guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            employeBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             lastNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -99,14 +90,23 @@
             employeTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             loginDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            employeBindingSource = new BindingSource(components);
+            guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2CustomGradientPanel1.SuspendLayout();
             pnEmployeControl.SuspendLayout();
             pnManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
+            guna2CustomGradientPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // guna2CustomGradientPanel2
@@ -341,6 +341,7 @@
             cbEmployeType.Name = "cbEmployeType";
             cbEmployeType.Size = new Size(135, 28);
             cbEmployeType.TabIndex = 57;
+            cbEmployeType.SelectedIndexChanged += cbEmployeType_SelectedIndexChanged;
             // 
             // txSureName
             // 
@@ -409,6 +410,82 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(906, 195);
             dataGridView1.TabIndex = 23;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            lastNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sureNameDataGridViewTextBoxColumn
+            // 
+            sureNameDataGridViewTextBoxColumn.DataPropertyName = "SureName";
+            sureNameDataGridViewTextBoxColumn.HeaderText = "SureName";
+            sureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            sureNameDataGridViewTextBoxColumn.Name = "sureNameDataGridViewTextBoxColumn";
+            sureNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // yearOfCompletionDataGridViewTextBoxColumn
+            // 
+            yearOfCompletionDataGridViewTextBoxColumn.DataPropertyName = "YearOfCompletion";
+            yearOfCompletionDataGridViewTextBoxColumn.HeaderText = "YearOfCompletion";
+            yearOfCompletionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            yearOfCompletionDataGridViewTextBoxColumn.Name = "yearOfCompletionDataGridViewTextBoxColumn";
+            yearOfCompletionDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
+            salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
+            salaryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            salaryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // employeTypeDataGridViewTextBoxColumn
+            // 
+            employeTypeDataGridViewTextBoxColumn.DataPropertyName = "EmployeType";
+            employeTypeDataGridViewTextBoxColumn.HeaderText = "EmployeType";
+            employeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            employeTypeDataGridViewTextBoxColumn.Name = "employeTypeDataGridViewTextBoxColumn";
+            employeTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            loginDataGridViewTextBoxColumn.MinimumWidth = 6;
+            loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            loginDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // employeBindingSource
+            // 
+            employeBindingSource.DataSource = typeof(DataBase.MainModels.EmployeControl.Employe);
             // 
             // guna2CustomGradientPanel3
             // 
@@ -578,82 +655,6 @@
             guna2Button1.TabIndex = 1;
             guna2Button1.Text = "Dashboard";
             // 
-            // employeBindingSource
-            // 
-            employeBindingSource.DataSource = typeof(DataBase.MainModels.EmployeControl.Employe);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            firstNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            lastNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sureNameDataGridViewTextBoxColumn
-            // 
-            sureNameDataGridViewTextBoxColumn.DataPropertyName = "SureName";
-            sureNameDataGridViewTextBoxColumn.HeaderText = "SureName";
-            sureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            sureNameDataGridViewTextBoxColumn.Name = "sureNameDataGridViewTextBoxColumn";
-            sureNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // yearOfCompletionDataGridViewTextBoxColumn
-            // 
-            yearOfCompletionDataGridViewTextBoxColumn.DataPropertyName = "YearOfCompletion";
-            yearOfCompletionDataGridViewTextBoxColumn.HeaderText = "YearOfCompletion";
-            yearOfCompletionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            yearOfCompletionDataGridViewTextBoxColumn.Name = "yearOfCompletionDataGridViewTextBoxColumn";
-            yearOfCompletionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            salaryDataGridViewTextBoxColumn.DataPropertyName = "Salary";
-            salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            salaryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            salaryDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // employeTypeDataGridViewTextBoxColumn
-            // 
-            employeTypeDataGridViewTextBoxColumn.DataPropertyName = "EmployeType";
-            employeTypeDataGridViewTextBoxColumn.HeaderText = "EmployeType";
-            employeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            employeTypeDataGridViewTextBoxColumn.Name = "employeTypeDataGridViewTextBoxColumn";
-            employeTypeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            loginDataGridViewTextBoxColumn.MinimumWidth = 6;
-            loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            loginDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
             // ManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -674,8 +675,8 @@
             pnManager.ResumeLayout(false);
             pnManager.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            guna2CustomGradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).EndInit();
+            guna2CustomGradientPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 

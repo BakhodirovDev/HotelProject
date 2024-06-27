@@ -48,7 +48,57 @@ namespace HotelProject.Models.Services
                 throw;
             }
         }
-
+        public bool CheckLogin(string login)
+        {
+            foreach (Employe employe in EmployeList())
+            {
+                if (login == employe.Login)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool CheckProbel(string str)
+        {
+            if (str.Length > 0)
+            {
+                int sanoq = 0;
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (str[i] == ' ')
+                    {
+                        sanoq++;
+                    }
+                }
+                if (sanoq != str.Length)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool CheckNumber(string str)
+        {
+            if (str.Length > 0)
+            {
+                int sanoq = 0;
+                char FirstChar = '1';
+                for (int i = 0; i < str.Length; i++)
+                {
+                    FirstChar = str[0];
+                    if (str[i] >= 48 && str[i] <= 57)
+                    {
+                        sanoq++;
+                    }
+                }
+                if (FirstChar != '0' && sanoq == str.Length)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public List<Employe> GetSeachList(string search)
         {
             throw new NotImplementedException();

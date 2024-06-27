@@ -55,7 +55,7 @@ namespace HotelProject.Models.Forms.Manager
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -100,17 +100,45 @@ namespace HotelProject.Models.Forms.Manager
 
         private void btDo_Click(object sender, EventArgs e)
         {
-            if(btDo.Text == "Qo'shish")
+            if (btDo.Text == "Qo'shish")
             {
                 if (employeServices.CalculateAge(DateTime.Parse(dTPBirthday.Text)) >= 18)
                 {
-                    if(cbEmployeType.Text.Length > 0)
+                    if (cbEmployeType.Text.Length > 0)
                     {
+                        if(cbEmployeType.Text == "Manager" || cbEmployeType.Text == "Admin")
+                        {
+                            if(employeServices.CheckProbel(txLogin.Text) && txLogin.Text.Length >= 4)
+                            {
+                                if (employeServices.CheckLogin(txLogin.Text))
+                                {
+                                    if(employeServices.CheckProbel(txPassword.Text) && txPassword.Text.Length >= 4)
+                                    {
 
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Parol bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Bu login oldindan mavjud", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Login bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        else
+                        {
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Ishchi turini tanlamadingiz", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Ishchi turini tanlamadingiz", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -118,7 +146,7 @@ namespace HotelProject.Models.Forms.Manager
                     MessageBox.Show("Yosh bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if(btDo.Text == "Yangilash")
+            else if (btDo.Text == "Yangilash")
             {
 
             }
@@ -126,6 +154,26 @@ namespace HotelProject.Models.Forms.Manager
             {
 
             }
+        }
+
+        private void cbEmployeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbEmployeType.Text == "Admin" || cbEmployeType.Text == "Manager")
+            {
+                lbLogin.Visible = true;
+                txLogin.Visible = true;
+                lbPassword.Visible = true;
+                txPassword.Visible = true;
+            }
+            else
+            {
+                lbLogin.Visible = false;
+                txLogin.Visible = false;
+                lbPassword.Visible = false;
+                txPassword.Visible = false;
+            }
+            txPrice.Text = workPlaceService.GetPrice(cbEmployeType.Text).ToString();
+            txPrice.ReadOnly = true;
         }
     }
 }
