@@ -86,9 +86,9 @@ namespace SysHotel.Models.DataBase
 
                 return res;
             }
-            catch (Exception ex)
+            catch
             {
-                throw new Exception("Error executing query", ex);
+                throw;
             }
         }
 
