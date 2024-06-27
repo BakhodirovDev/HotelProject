@@ -8,7 +8,7 @@ namespace HotelProject.Models.DataBase.MainModels.EmployeControl
 {
     public class Room
     {
-        public int RoomID { get; set; }
+        public int RoomId { get; set; }
         public string? RoomType { get; set; }
         public int RoomNumber { get; set; }
         public int PeopleSize { get; set; }

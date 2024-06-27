@@ -15,29 +15,29 @@ namespace HotelProject.Models.Forms.Login
 {
     public partial class AddUser : Form
     {
-        public AddUser()
-        {
-            InitializeComponent();
-        }
+        //public AddUser()
+        //{
+        //    InitializeComponent();
+        //}
 
-        private void btnAddUser_Click(object sender, EventArgs e)
-        {
-            Client client = new Client();
-            Users users = new Users()
-            {
-                FirstName = FirstName.Text,
-                LastName = LastName.Text,
-                UserName = UserName.Text,
-                Password = Password.Text,
-                RoleId = 1
-            };
-            LoginService loginService = new LoginService();
-            loginService.AddUser(users,client);
-        }
+        //private void btnAddUser_Click(object sender, EventArgs e)
+        //{
+        //    Client client = new Client();
+        //    Users users = new Users()
+        //    {
+        //        FirstName = FirstName.Text,
+        //        LastName = LastName.Text,
+        //        UserName = UserName.Text,
+        //        Password = Password.Text,
+        //        RoleId = 1
+        //    };
+        //    LoginService loginService = new LoginService();
+        //    loginService.AddUser(users,client);
+        //}
 
-        private void AddUser_Load(object sender, EventArgs e)
-        {
+        //private void AddUser_Load(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

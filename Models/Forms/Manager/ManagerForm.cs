@@ -20,7 +20,7 @@ namespace HotelProject.Models.Forms.Manager
     {
         EmployeServices employeServices = new EmployeServices();
         WorkPlaceService workPlaceService = new WorkPlaceService();
-        public ManagerForm(int ID)
+        public ManagerForm(long ID)
         {
             InitializeComponent();
             pnManager.Visible = true;

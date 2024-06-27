@@ -76,7 +76,6 @@
             btnAddUser.TabIndex = 4;
             btnAddUser.Text = "AddUser";
             btnAddUser.UseVisualStyleBackColor = true;
-            btnAddUser.Click += btnAddUser_Click;
             // 
             // AddUser
             // 
@@ -91,7 +90,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "AddUser";
             Text = "AddUser";
-            Load += AddUser_Load;
             ResumeLayout(false);
             PerformLayout();
         }

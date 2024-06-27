@@ -2,6 +2,8 @@
 using HotelProject.Models.DataBase.MainModels.EmployeControl;
 using HotelProject.Models.DataBase.MainModels.Order;
 using HotelProject.Models.Services;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.ApplicationServices;
 using SysHotel.Models.Forms.Login;
 using System;
 using System.Collections.Generic;
@@ -20,10 +22,19 @@ namespace HotelProject.Models.Forms.Admin
 {
     public partial class AdminForm : Form
     {
+        List<User> SearchOneUser = new List<User>();
+        List<Client> SearchOneClient = new List<Client>();
+        List<Room> SearchOneRoom = new List<Room>();
+
+        List<Client> ThisRoomClients = new List<Client>();
+        List<Orders> NewOrders = new List<Orders>();
+
+        List<Client> OrdersAddRooms = new List<Client>();
+
         public bool TimePanel = false;
         public bool MenuPanel = false;
         OrderService orderService = new OrderService();
-        public AdminForm(int id)
+        public AdminForm(long id)
         {
             InitializeComponent();
             AddRoomTypes();
@@ -61,8 +72,8 @@ namespace HotelProject.Models.Forms.Admin
             {
 
                 // Tanlovni bekor qilish va bugungi sanaga o'rnatish
-                monthCalendar1.SetDate(DateTime.Today);
-                monthCalendar1.AddBoldedDate(DateTime.Today.AddDays(-1));
+                //monthCalendar1.SetDate(DateTime.Today);
+                //monthCalendar1.AddBoldedDate(DateTime.Today.AddDays(-1));
             }
         }
 
@@ -148,10 +159,7 @@ namespace HotelProject.Models.Forms.Admin
             OrderDVG.DataSource = orderService.ActiveOrderList(BedOrRoom.Checked, RoomTypeComboBox.Text);
         }
 
-        private void RoomTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
         private void AddRoomTypes()
         {
             RoomTypeComboBox.Items.Add("Active Rooms");
@@ -172,6 +180,8 @@ namespace HotelProject.Models.Forms.Admin
                 AddOrderPanel.Visible = true;
                 AddOrderPanel.Dock = DockStyle.Fill;
                 AddOrderPanel.BringToFront();
+                AddOrderPanel.Refresh();
+                OrderDVG.Refresh();
             }
         }
 
@@ -191,10 +201,7 @@ namespace HotelProject.Models.Forms.Admin
             OrderPanel.BringToFront();
         }
 
-        private void RoomNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -212,10 +219,7 @@ namespace HotelProject.Models.Forms.Admin
             PasswordIdTextBox.TextChanged += guna2TextBox1_TextChanged;
         }
 
-        private void IsmTextBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void IsmTextBox_TextChanged_1(object sender, EventArgs e)
         {
@@ -245,9 +249,89 @@ namespace HotelProject.Models.Forms.Admin
             FamilyaTextBox.TextChanged += FamilyaTextBox_TextChanged;
         }
 
-        private void PhoneNumberTextBox_TextChanged(object sender, EventArgs e)
+
+
+        private void AddOrderButton_Click(object sender, EventArgs e)
         {
-            
+            Client client = new Client();
+            try
+            {
+                client = new Client()
+                {
+                    PassportId = PasswordIdTextBox.Text,
+                    FirstName = IsmTextBox.Text,
+                    LastName = FamilyaTextBox.Text,
+                    PhoneNumber = PhoneNumberTextBox.Text,
+                    YearOfCompletion = int.Parse(TogilganYilTextBox.Text),
+                    Gender = GenderComboBox.Text
+                };
+            }
+            catch
+            {
+                MessageBox.Show("Malumotlarni to'liq kiriting!!!");
+            }
+            Client HaveClient = new Client();
+            HaveClient = ThisRoomClients.Find(x => x.PassportId == client.PassportId);
+
+            if (HaveClient == null || ThisRoomClients == null)
+                ThisRoomClients.Add(client);
+
+            ThisRoomOrdersDGV.DataSource = null;
+            ThisRoomOrdersDGV.DataSource = ThisRoomClients;
+
+            ClearText();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            SearchOneClient = orderService.SearchClient(PasswordIdTextBox.Text);
+            if (SearchOneClient.Count >= 1)
+            {
+                IsmTextBox.Text = SearchOneClient[0].FirstName;
+                FamilyaTextBox.Text = SearchOneClient[0].LastName;
+                PhoneNumberTextBox.Text = SearchOneClient[0].PhoneNumber;
+                TogilganYilTextBox.Text = SearchOneClient[0].YearOfCompletion.ToString();
+                GenderComboBox.Text = SearchOneClient[0].Gender;
+            }
+
+            SearchOneClient.Clear();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ThisRoomOrdersDGV.DataSource = ThisRoomClients;
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            ClearText();
+        }
+
+        private void ClearText()
+        {
+            PasswordIdTextBox.Text = string.Empty;
+            IsmTextBox.Text = string.Empty;
+            FamilyaTextBox.Text = string.Empty;
+            PhoneNumberTextBox.Text = string.Empty;
+            TogilganYilTextBox.Text = string.Empty;
+            GenderComboBox.SelectedIndex = -1;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+            ThisRoomOrdersDGV.DataSource = null;
+            ThisRoomClients.Clear();
+            ClearText();
+            OrderPanel.Visible = true;
+            AddOrderPanel.Visible = false;
+            OrderPanel.Dock = DockStyle.Fill;
+            OrderPanel.BringToFront();
+        }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
