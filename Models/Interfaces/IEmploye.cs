@@ -10,5 +10,6 @@ namespace HotelProject.Models.Interfaces
     public interface IEmploye
     {
         Task<bool> AddUser(Employe model);
+        List<Employe> GetSeachList(string search);
     }
 }
