@@ -11,7 +11,8 @@ namespace HotelProject.Models.Interfaces
     public interface IClientReport
     {
         Task<List<ClientReport>> clientReportList();
-        Task<List<ClientReport>> clientSortReport ();
-        Task<List<ClientReport>> clientReportFilter(DateTime time1,DateTime time2);
+        Task<List<ClientReport>> clientSortReport(string model);
+        Task<List<ClientReport>> clientReportFilter(DateTime time1, DateTime time2);
+
     }
 }

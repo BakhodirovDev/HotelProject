@@ -11,33 +11,32 @@ namespace HotelProject.Models.Services
 {
     public class ClientReportMethod :IClientReport
     {
-        public Task<List<ClientReport>> clientReportList()
+        public async Task<List<ClientReport>> clientReportList()
         {
             try
             {
-                List<ClientReport> clientReports = DbContext.Query<ClientReport>("select * from report_client_mv_new1");
-                return Task.FromResult(clientReports);
+                List<ClientReport> clientReports = DbContext.Query<ClientReport>("select * from \"public\".\"report_client_mv_new1\"");
+                return await Task.FromResult(clientReports);
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }
         }
-        public Task<List<ClientReport>> clientSortReport()
+        public Task<List<ClientReport>> clientSortReport(string x)
         {
             try
             {
-                List<ClientReport> clientReports=new List<ClientReport>();
-                clientReports.Sort();
+                List<ClientReport> clientReports = DbContext.Query<ClientReport>($"select * from \"public\".\"report_client_mv_new1\" order by {x} desc");
                 return Task.FromResult(clientReports);
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }
 
         }
-       public  Task<List<ClientReport>> clientReportFilter(DateTime time1,DateTime time2)
+        public async Task<List<ClientReport>> clientReportFilter(DateTime time1, DateTime time2)
         {
             try
             {
@@ -45,18 +44,19 @@ namespace HotelProject.Models.Services
                 List<ClientReport> filterClientReport = new List<ClientReport>();
                 foreach (ClientReport clientReport in clientReports)
                 {
-                    if(clientReport.entertime>=time1 && clientReport.checkouttime <= time2)
+                    if (clientReport.entertime >= time1 && clientReport.checkouttime <= time2)
                     {
                         filterClientReport.Add(clientReport);
                     }
                 }
-                return Task.FromResult(filterClientReport); 
+                return await Task.FromResult(filterClientReport);
             }
-            catch (Exception ex) 
-            { 
+            catch
+            {
                 throw;
             }
         }
+
 
     }
 }

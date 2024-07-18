@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.Models.DataBase.MainModels.ReportModels
 {
-    public class ClientReport
+    public class ClientReportUpdate
     {
         public string id { get; set; }
         public string firstname { get; set; }
@@ -15,7 +15,9 @@ namespace HotelProject.Models.DataBase.MainModels.ReportModels
         public DateTime checkouttime { get; set; }
         public string roomnumber { get; set; }
         public string roomtype { get; set; }
-        public double roomoneprice { get; set; }
+        public double pay { get; set; }
+        public int count { get; set; }
+        public TimeSpan liveday { get; set; }
 
     }
 }

@@ -16,5 +16,8 @@
     <Compile Update="Models\Forms\Manager\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Models\Forms\Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
