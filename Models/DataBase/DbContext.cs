@@ -23,7 +23,7 @@ namespace SysHotel.Models.DataBase
         public static bool InsertQuery<T>(T model, string schema) where T : new()
         {
             using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
-            connection.Open();
+            connection.Open();  
             string entresult = InsertString<T>(model);
             using NpgsqlCommand cmd = new NpgsqlCommand(@$"INSERT INTO {schema}." + entresult, connection);
 
